@@ -1,12 +1,13 @@
 Package: MBESS
 Type: Package
 Title: The MBESS R Package
-Version: 4.8.0
-Date: 2020-08-04
+Version: 4.8.1
+Date: 2021-10-14
 Authors@R: c(person("Ken", "Kelley", role=c("aut", "cre"), email="kkelley@nd.edu"))
 Maintainer: Ken Kelley <kkelley@nd.edu>
 Depends: R (>= 3.5.0), stats
-Imports: boot, gsl, lavaan, MASS, methods, mnormt, nlme, OpenMx, parallel, sem, semTools 
+Imports: boot, lavaan, MASS, methods, mnormt, nlme, OpenMx, parallel, sem, semTools 
+Suggests: gsl
 Description: Implements methods that useful in designing research studies and analyzing data, with 
 	particular emphasis on methods that are developed for or used within the behavioral, 
 	educational, and social sciences (broadly defined). That being said, many of the methods 

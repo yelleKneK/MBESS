@@ -82,7 +82,7 @@ if(is.null(type))
     relia <- .getH.cov(S, N, varnames)
     if(interval.type != 0) stop("Hierarchical omega requires a full data set to estimate a confidence interval.")
   } else if(type == 5) {
-    stop("Categorical omega requires a real data.")
+    stop("Categorical omega requires a full data set (not summary measures).")
   }
   
   ### Interval Estimate
@@ -673,6 +673,7 @@ if(!requireNamespace("mnormt", quietly = TRUE)) stop("The package 'mnormt' is ne
     denom <- .polycorLavaan(fit, dat)[varnames, varnames]
     invstdvar <- 1 / sqrt(diag(fit@Fit@Sigma.hat[[1]]))
     polyr <- diag(invstdvar) %*% truevar %*% diag(invstdvar)
+    print(polyr)
     sumnum <- 0
     addden <- 0
     for(j in 1:q) {
@@ -734,16 +735,19 @@ if(!requireNamespace("mnormt", quietly = TRUE)) stop("The package 'mnormt' is ne
   result <- NULL
   if(ngroups == 1) {
     targettaunames <- rownames(coef$tau)
+    # This simply identifies where the "|" for separating the variable names from the thresholds.
     barpos <- sapply(strsplit(targettaunames, ""), function(x) which(x == "|"))
-    varthres <- apply(data.frame(targettaunames, barpos - 1), 1, function(x) substr(x[1], 1, x[2]))
-    result <- list(split(coef$tau, varthres))
+    varthres <- apply(data.frame(targettaunames, barpos-1), 1, function(x) substr(x[1], 1, x[2]))
+    result <- list(split(coef$tau, factor(varthres, levels=unique(varthres))))
   } else {
     result <- list()
     for(g in 1:ngroups) {
-      targettaunames <- rownames(coef[[g]]$tau)
-      barpos <- sapply(strsplit(targettaunames, ""), function(x) which(x == "|"))
-      varthres <- apply(data.frame(targettaunames, barpos - 1), 1, function(x) substr(x[1], 1, x[2]))
-      result[[g]] <- split(coef[[g]]$tau, varthres)
+      stop(print("Developmental; please contact maintainer!"))
+      #targettaunames <- rownames(coef[[g]]$tau)
+      #barpos <- sapply(strsplit(targettaunames, ""), function(x) which(x == "|"))
+      #varthres <- apply(data.frame(targettaunames, barpos-1), 1, function(x) substr(x[1], 1, x[2]))
+      #print(varthres)
+      #result[[g]] <- split(coef[[g]]$tau, factor(varthres, levels=unique(varthres)))
     }
   }
   return(result)
