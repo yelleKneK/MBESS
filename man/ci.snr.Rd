@@ -26,7 +26,7 @@ The confidence level must be specified in one of following two ways: using
 confidence interval coverage (\code{conf.level}), or lower and upper confidence 
 limits (\code{alpha.lower} and \code{alpha.upper}).
 
-This function uses the confidence interval transformation principle (Steiger, 2004) to transform the confidence limits for the noncentality parameter to the confidence limits for the population's signal-to-noise ratio. The confidence interval for noncentral \emph{F} parameter can be obtained 
+This function uses the confidence interval transformation principle (Steiger, 2004) to transform the confidence limits for the noncentality parameter to the confidence limits for the population's signal-to-noise ratio. The confidence interval for noncentral \emph{F}-parameter can be obtained 
 from the \code{conf.limits.ncf} function in MBESS, which is used internally within this function.
   
 }
@@ -49,7 +49,7 @@ Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence interval
 \note{ 
 The signal to noise ratio is defined as the variance due to the particular factor over the error variance (i.e., the mean square error).
 }
-\seealso{ \code{ci.srsnr}, \code{conf.limits.ncf} }
+\seealso{ \code{ci.srsnr}, \code{ci.omega2} \code{conf.limits.ncf} }
 \examples{
 
 ## Bargman (1970) gave an example in which a 5-group ANOVA with 11 subjects in each 
