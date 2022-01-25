@@ -19,7 +19,7 @@ part.of.se <- sqrt(sum((c.weights^2)/n))
 
 if(!is.null(Psi))
 {
-if(!is.null(means)) stop("Since the contrast effect ('Psi') was specified, you should not specify the vector of means ('means').")
+if(!is.null(means)) stop("Since the contrast effect (denoted 'Psi') was specified, you should not specify the vector of means ('means').")
 if(is.null(s.anova)) stop("You must specify the standard deviation of the errors (i.e., the square root of the error variance).")
 if(is.null(n)) stop("You must specify the vector per group/level sample size ('n').")
 if(is.null(c.weights)) stop("You must specify the vector of contrast weights ('c.weights').")
