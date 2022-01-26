@@ -15,9 +15,9 @@ if ( !is.null(alpha.lower)  &&  !is.null(alpha.upper) )
 conf.level<- 1- alpha.upper - alpha.lower
 }
 
-if (alpha.lower>.5 || alpha.lower<0) stop (" 'alpha.lower' must be smaller than .5 and nonnegative.")
-if (conf.level>1 || conf.level<0) stop (" 'conf.level' must be larger than 0 and smaller than 1. ")
-if (F.value<=0) stop (" 'F.value' must be larger than 0. ")
+if (alpha.lower>.5 || alpha.lower<0) stop ("'alpha.lower' must be smaller than .5 and nonnegative.")
+if (conf.level>1 || conf.level<0) stop ("'conf.level' must be larger than 0 and smaller than 1.")
+if (F.value<=0) stop ("'F.value' must be larger than 0.")
 # A helpful check, but not a fail-safe 'there is an error' issue.
 if (N<=0 || N<=df.1+df.2) stop ("N must be larger than df.1+df.2")
 
