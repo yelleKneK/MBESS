@@ -1,5 +1,4 @@
-ci.omega2 <- function(F.value=NULL, df.1=NULL, df.2=NULL, N=NULL, conf.level=.95,
- alpha.lower=NULL, alpha.upper=NULL, ...)
+ci.omega2 <- function(F.value=NULL, df.1=NULL, df.2=NULL, N=NULL, conf.level=.95, alpha.lower=NULL, alpha.upper=NULL, ...)
 {
 #######################################################################33
 # Preliminary information and function set-up.

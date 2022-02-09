@@ -2,9 +2,9 @@
 \alias{ci.omega2}
 
 \title{
-Confidence Interval for the omega-squared (\eqn{\omega^2}) for between designs (and partial omega-squared for multifactor between designs)}
+Confidence Interval for omega-squared (\eqn{\omega^2}) for fixed-effects ANOVA and ANCOVA designs (and partial omega-squared \eqn{\omega^2_p} for multifactor ANOVA and ANCOVA designs)}
 \description{
-Function to obtain the exact confidence interval using the non-central $F$ distribution for omega-squared or partial omega-squared. This function is only for between designs.}
+Function to obtain the exact confidence interval using the non-central $F$ distribution for omega-squared or partial omega-squared.}
 \usage{
 ci.omega2(F.value = NULL, df.1 = NULL, df.2 = NULL, N = NULL, conf.level = 0.95, 
 alpha.lower = NULL, alpha.upper = NULL, ...)
@@ -12,7 +12,7 @@ alpha.lower = NULL, alpha.upper = NULL, ...)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{F.value}{
-The value of the $F$-statistic for the analysis of variace model (ANOVA) or, in the case of a multifactor ANOVA, the $F$-statistic for the particular factor.)
+The value of the $F$-statistic for the analysis of (co)variace model (ANOVA) or, in the case of a multifactor ANOVA, the $F$-statistic for the particular factor.)
 }
   \item{df.1}{
 numerator degrees of freedom
@@ -21,9 +21,9 @@ numerator degrees of freedom
 denominator degrees of freedom
 }
   \item{N}{
-total sample size
+total sample size (i.e., the number of individual entities in the data)
 }
-  \item{conf.level}{ confidence interval coverage (i.e., 1 - Type I error rate), default is .95 }
+  \item{conf.level}{ confidence interval coverage (i.e., 1-Type I error rate), default is .95 }
   \item{alpha.lower}{ Type I error for the lower confidence limit }
   \item{alpha.upper}{ Type I error for the upper confidence limit }
   \item{\dots}{ allows one to potentially include parameter values for inner functions }
@@ -43,11 +43,11 @@ Returns the confidence limits for (partial) omega-sqaured.
 \item{lower_Limit_omega2}{upper limit for omega-squared}
 }
 \references{
-Kelley, K. (2007). Constructing confidence intervals for standardized effect sizes: Theory, application, and implementation. \emph{Journal of Statistical Software, 20} (8), 1--24.
-
 Fleishman, A. I. (1980). Confidence intervals for correlation ratios. \emph{Educational and Psychological Measurement, 40}, 659--670.
 
-Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence intervals and tests of close fit in the Analysis of Variance and Contrast Analysis.  \emph{Psychological Methods, 9}, 164--182.
+Kelley, K. (2007). Constructing confidence intervals for standardized effect sizes: Theory, application, and implementation. \emph{Journal of Statistical Software, 20} (8), 1--24.
+
+Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence intervals and tests of close fit in the Analysis of Variance and Contrast Analysis. \emph{Psychological Methods, 9}, 164--182.
 }
 \author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
 
