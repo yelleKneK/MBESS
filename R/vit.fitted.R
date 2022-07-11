@@ -7,7 +7,7 @@ function(fit.Model, layout = c(3,3), ylab = "", xlab = "", pct.rand = NULL, numb
 # Check if the input object is in the right format that can be used in the 
 # function 
 
-if(class(fit.Model)[1]!="nlme" && class(fit.Model)!="lme" && class(fit.Model)!="lmer")
+if(!inherits(fit.Model[1], what="nlme") && !inherits(fit.Model, what="lme") && !inherits(fit.Model, what="lmer"))
 {
 stop("Please specify a object fit by lme or nlme in nlme package or lmer in lme4 package.")
 }

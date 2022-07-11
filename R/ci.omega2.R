@@ -1,8 +1,9 @@
 ci.omega2 <- function(F.value=NULL, df.1=NULL, df.2=NULL, N=NULL, conf.level=.95, alpha.lower=NULL, alpha.upper=NULL, ...)
 {
-#######################################################################33
+#######################################################################
+# Thanks to Jason Finley and Antoinette Kroes for helpful comments and for encouraging this function to be included in MBESS.
+    
 # Preliminary information and function set-up.
-
 if(is.null(alpha.lower) & is.null(alpha.upper))
 {
 alpha.lower <- (1-conf.level)/2
@@ -30,7 +31,7 @@ if(is.null(F.value)) stop("You must specify the observed F-value ('F.value') fro
 limits <- conf.limits.ncf(F.value = F.value, conf.level = NULL, df.1 = df.1, 
 df.2 = df.2, alpha.lower = alpha.lower, alpha.upper = alpha.upper)
 
-# CI from Steiger (2004) Eq. 17. This is the CI for Omega^2. 
+# CI from Steiger (2004) Eq. 16. This is the CI for Omega^2. 
 lower_limit <- limits$Lower.Limit/(limits$Lower.Limit + N)
 upper_limit <- limits$Upper.Limit/(limits$Upper.Limit + N)
 

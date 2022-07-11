@@ -576,10 +576,10 @@ ss.aipe.reliability <- function (model = NULL, type = NULL, width = NULL, S = NU
               CI.Result.raw <- try(.original.ci.reliability(S = sim.data, 
                                                             N = n.i, model = "Congeneric", type = Type.to.Use, 
                                                             conf.level = conf.level), silent = TRUE)
-            if (class(CI.Result.raw) == "try-error") {
+            if (inherits(CI.Result.raw, what="try-error")) {
               CI.Result[iters] <- NA
             }
-            if (class(CI.Result.raw) != "try-error") {
+            if (!inherits(CI.Result.raw, what="try-error")) {
               CI.Result[iters] <- CI.Result.raw$CI.upper - 
                 CI.Result.raw$CI.lower
             }
@@ -603,10 +603,10 @@ ss.aipe.reliability <- function (model = NULL, type = NULL, width = NULL, S = NU
           CI.Result.raw <<- try(.original.ci.reliability(S = sim.data, 
                                                          N = n.i, model = Model.to.Use, type = Type.to.Use, 
                                                          conf.level = conf.level), silent = TRUE)
-          if (class(CI.Result.raw) == "try-error") {
+          if (inherits(CI.Result.raw, what="try-error")) {
             CI.Result[iters] <- NA
           }
-          if (class(CI.Result.raw) != "try-error") {
+          if (!inherits(CI.Result.raw, what="try-error")) {
             CI.Result[iters] <- CI.Result.raw$CI.upper - 
               CI.Result.raw$CI.lower
           }
@@ -624,10 +624,10 @@ ss.aipe.reliability <- function (model = NULL, type = NULL, width = NULL, S = NU
               CI.Result.raw <- try(.original.ci.reliability(S = sim.data, 
                                                             N = n.i, model = Model.to.Use, type = Type.to.Use, 
                                                             conf.level = conf.level), silent = TRUE)
-              if (class(CI.Result.raw) == "try-error") {
+              if (inherits(CI.Result.raw, what="try-error")) {
                 CI.Result[iters] <- NA
               }
-              if (class(CI.Result.raw) != "try-error") {
+              if (!inherits(CI.Result.raw, "try-error")) {
                 CI.Result[iters] <- CI.Result.raw$CI.upper - 
                   CI.Result.raw$CI.lower
               }
@@ -650,10 +650,10 @@ ss.aipe.reliability <- function (model = NULL, type = NULL, width = NULL, S = NU
           CI.Result.raw <- try(.original.ci.reliability(S = sim.data, 
                                                         N = n.i, model = Model.to.Use, type = Type.to.Use, 
                                                         conf.level = conf.level), silent = TRUE)
-          if (class(CI.Result.raw) == "try-error") {
+          if (inherits(CI.Result.raw, what="try-error")) {
             CI.Result[iters] <- NA
           }
-          if (class(CI.Result.raw) != "try-error") 
+          if (!inherits(CI.Result.raw, "try-error")) 
             {
             CI.Result[iters] <- CI.Result.raw$CI.upper - 
               CI.Result.raw$CI.lower

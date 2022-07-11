@@ -289,7 +289,7 @@ sem.default <- function(ram, S, N, param.names=paste('Param', 1:t, sep=''),
         #convergence <- res$code
         if (!warn) options(save.warn)
         
-        if (class(res) == "try-error"|| res$convergence>2){
+        if (inherits(res, what="try-error")|| res$convergence>2){
             result$coeff <- rep(NA, t)
             result$par.posn <- NA
             result$iterations <- NA
@@ -317,7 +317,7 @@ sem.default <- function(ram, S, N, param.names=paste('Param', 1:t, sep=''),
             #        res$code, '. Consult ?nlm.\n', sep=""))
                       
             qr.hess <- try(qr(res$hessian), silent=TRUE)
-            if (class(qr.hess) == "try-error"){
+            if (inherits(qr.hess, what="try-error")){
                 #warning("Could not compute QR decomposition of Hessian.\nOptimization probably did not converge.\n")
                 cov <- matrix(NA, t, t)
                 colnames(cov) <- rownames(cov) <- param.names
@@ -360,7 +360,7 @@ sem.default <- function(ram, S, N, param.names=paste('Param', 1:t, sep=''),
             }#end of if(class(res)!="try-error") else
         }
                     
-if (class(res)!="try-error"){
+if (!inherits(res, what="try-error")){
     result$criterion <-  c(obj) - n - log(det(S))
     C <- attr(obj, "C")
     rownames(C) <- colnames(C) <- var.names[observed]

@@ -33,7 +33,7 @@ if(is.null(F.value)) stop("You must specify the observed F-value ('F.value') fro
 Lims <- conf.limits.ncf(F.value = F.value, conf.level = NULL, df.1 = df.1, 
         df.2 = df.2, alpha.lower = alpha.lower, alpha.upper = alpha.upper, ...)
 
-if (!class(Lims$Lower.Limit)=="numeric") {Lims$Lower.Limit <- 0}
+if (!inherits(Lims$Lower.Limit, what = "numeric")) {Lims$Lower.Limit <- 0}
 
 # print(paste("The", 1-(alpha.lower + alpha.upper), "confidence limits for the signal to noise ratio are given as:"))
 return(list(Lower.Limit.Signal.to.Noise.Ratio=Lims$Lower.Limit/N, Upper.Limit.Signal.to.Noise.Ratio=Lims$Upper.Limit/N))
