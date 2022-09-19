@@ -82,7 +82,7 @@ for (i in 1:q){
 	B[,i]<- (-1)*D%*%vech(W.inv%*%Sigma.deriv[,,i]%*%W.inv) 
 	}
 
-y <- matrix(1:p.star/100, p.star,1)
+y <- matrix(rnorm(p.star), p.star,1)
 B.qr<- qr(B)
 e.tilt <- qr.resid(B.qr, y)
 
