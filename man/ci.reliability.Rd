@@ -7,7 +7,7 @@ A function to calculate the point estimate and confidence interval for a reliabi
 }
 \usage{
 ci.reliability(data = NULL, S = NULL, N = NULL, aux = NULL, 
-type = "omega", interval.type = "mlr", B = 10000, conf.level = 0.95)
+type = "omega", interval.type = "default", B = 10000, conf.level = 0.95)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

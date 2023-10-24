@@ -1,18 +1,18 @@
 ci.reliability <- function(data = NULL, S = NULL, N = NULL, aux = NULL, type = "omega", 
-                           interval.type = "mlr", B = 10000, conf.level = 0.95) 
+                           interval.type = "default", B = 10000, conf.level = 0.95) 
 {
-
-if(!is.null(data)) data <- as.data.frame(data)
   
-if(is.null(type)) 
-    {
+  if(!is.null(data)) data <- as.data.frame(data)
+  
+  if(is.null(type)) 
+  {
     if(!is.null(data) && all(apply(data, 2, function(x) length(table(x))) <= 10)) 
-      {type <- 5
-      warnings("Categorical omega is used because your variables look like ordered categorical variables. If not, please specify the 'type' argument.")
-      } else {
+    {type <- 5
+    warnings("Categorical omega is used because your variables look like ordered categorical variables. If not, please specify the 'type' argument.")
+    } else {
       type <- 4
       warnings("Hierarchical omega is used by default for covariance matrix input or continuous data input.")
-              }
+    }
   }
   
   type1 <- c(1, "alpha", "true score equivalent", "true-score equivalent", "true score", "equivalent", "tau equivalent", "cronbach", "tau-equivalent", "a")
@@ -35,6 +35,12 @@ if(is.null(type))
     type <- 5
   } else {
     stop("Please provide a correct type of reliability: 'alpha', 'alpha-analytic', 'omega', 'hierarchical', or 'categorical'.")
+  }
+  
+  if(type == 5 && interval.type == "default"){
+    interval.type == "percentile"
+  } else if (interval.type == "default") {
+    interval.type == "mlr"
   }
   
   interval.type <- .translateinterval.type(interval.type, pos = 1)
@@ -647,9 +653,9 @@ if(is.null(type))
 
 .catOmega <- function(dat) {
   
-if(!requireNamespace("lavaan", quietly = TRUE)) stop("The package 'lavaan' is needed; please install the package and try again.")
-if(!requireNamespace("mnormt", quietly = TRUE)) stop("The package 'mnormt' is needed; please install the package and try again.")
-
+  if(!requireNamespace("lavaan", quietly = TRUE)) stop("The package 'lavaan' is needed; please install the package and try again.")
+  if(!requireNamespace("mnormt", quietly = TRUE)) stop("The package 'mnormt' is needed; please install the package and try again.")
+  
   q <- ncol(dat)
   for(i in 1:q) dat[,i] <- ordered(dat[,i])
   varnames <- paste0("y", 1:q)
@@ -1120,4 +1126,3 @@ if(!requireNamespace("mnormt", quietly = TRUE)) stop("The package 'mnormt' is ne
   }
   interval.type
 }
-
