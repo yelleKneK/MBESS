@@ -33,7 +33,7 @@ Returns the necessary sample size for the combination of the desired goals and v
 }
 \references{Kelley, K., & Rausch, J. R. (2011). Accuracy in parameter estimation for polynomial change models. \emph{Psychological Methods}.}
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \note{Like in all formal sample size planning methods that require the value of one or more population parameter(s), if the population parameters are incorrectly specified, there is no guarantee that the sample size this function returns will be accurate. Of course, the further away from the true values, the further away the true sample size will tend to be.
 

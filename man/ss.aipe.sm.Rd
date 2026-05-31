@@ -43,7 +43,7 @@ statistical methods. In L. L. Harlow, S. A. Mulaik,& J.H. Steiger (Eds.), \emph{
 no significance tests?} (pp. 221--257). Mahwah, NJ: Lawrence Erlbaum. }
 
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}); Keke Lai}
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}); Keke Lai}
 
 %\note{}
 

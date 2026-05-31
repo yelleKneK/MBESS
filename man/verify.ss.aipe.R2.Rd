@@ -34,5 +34,5 @@ Returns the exact (provided \code{G} is large enough) sample size necessary to s
 conditions specified.
 }
 %\references{ ~put references to the literature/web site here ~ }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 \keyword{design}

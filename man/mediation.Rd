@@ -30,11 +30,11 @@ complete.set=FALSE)
   \item{B}{number of bootstrap replications when \code{bootstrap=TRUE} (e.g., 10000)}
   \item{which.boot}{which bootstrap method to use. It can be \code{Percentile} or \code{BCa}, or both}
   \item{save.bs.replicates}{Logical argument indicating whether to save the each bootstrap sample or not}
-  \item{complete.set}{identifies if the function should report the estimated kappa.squarred (see below)}
+  \item{complete.set}{identifies if the function should report the estimated kappa.squared (see below)}
 }
 \details{
 Based on the work of Preacher and Kelley (2010) and works cited therein, this function implements (simple) mediation analysis in a way that automates much of the results that are generally of interest, where "simple" means one independent variable, one mediator, and one dependent variable. More specifically, three regression outputs are automated as is the calculation of effect sizes that are thought to be useful or potentially useful in the context of mediation. Much work on mediation models exists in the literature, which should be consulted for proper interpretation of the effect sizes, models, and meaning of results. The usefulness of effect size \eqn{\kappa^2} was called into question
-by Wen and Fan (2015). Further, another paper by Lachowicz, Preacher, and Kelley (submitted) offers a better was of quantifying the effect size and it is developed for more complex models. Users are encouraged to use, instead of or in addition to this function, the \link{upsilon} function.
+by Wen and Fan (2015). Further, another paper by Lachowicz, Preacher, and Kelley (2018) offers a better way of quantifying the effect size and it is developed for more complex models. Users are encouraged to use, instead of or in addition to this function, the \link{upsilon} function.
 }
 \value{
   \item{Y.on.X$Regression.Table}{Regression table of \code{Y} conditional on \code{X}}
@@ -88,7 +88,7 @@ Hansen, W. B., & McNeal, R. B. (1996). The law of maximum expected potential eff
 
 Huang, B., Sivaganesan, S., Succop, P., & Goodman, E. (2004). Statistical assessment of mediational effects for logistic mediational models. \emph{Statistics in Medicine, 23}, 2713--2728.
 
-Lachowicz, M. J., Preacher, K. J., & Kelley, K. (submitted). A novel measure of effect size for mediation analysis. Submited for publication. 
+Lachowicz, M. J., Preacher, K. J., & Kelley, K. (2018). A novel measure of effect size for mediation analysis. \emph{Psychological Methods}, \emph{23}, 244--261.
 
 Lindenberger, U., & Potter, U. (1998). The complex nature of unique and shared effects in hierarchical linear regression: Implications for developmental psychology. \emph{Psychological Methods, 3}, 218--230.
 
@@ -105,7 +105,7 @@ Wen, Z., & Fan, X. (2015). Monotonicity of effect sizes: Questioning kappa-squar
 
 }
 
-\author{Ken Kelley (University of Notre Dame; KKelley@nd.edu)}
+\author{Ken Kelley (University of Notre Dame; kkelley@nd.edu)}
 %\note{ }
 \seealso{\code{\link{mediation.effect.plot}}, \code{\link{mediation.effect.bar.plot}}}
 \examples{

@@ -1,5 +1,5 @@
 `cor2cov` <-
-function(cor.mat, sd, discrepancy=1e-5)
+function(cor.mat, sd)
 {
 if(dim(cor.mat)[1]!=dim(cor.mat)[2]) stop("'cor.mat' should be a square matrix")
 

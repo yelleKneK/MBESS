@@ -5,8 +5,9 @@ if(!is.null(assurance)& !is.null(certainty))
     {if(assurance!=certainty) stop("'assurance' and 'certainty' must have the same value")}
 if(!is.null(certainty)) assurance<- certainty 
 
-if(sum(c.weights)!=0) stop("The sum of the coefficients must be zero")
-if(sum(c.weights[c.weights>0])>1) stop("Please use fractions to specify the contrast weights")
+if(identical(sum(c.weights > 1), 0)) stop("Please use fractional values to specify the contrast weights (i.e., no contrast weights above 1.")
+if(identical(sum(c.weights < -1), 0)) stop("Please use fractional values to specify the contrast weights (i.e., no contrast weights less than -1.")
+if(!identical(round(sum(c.weights), 4), 0)) stop("The sum of the contrast weights ('c.weights') should equal zero.")
 
 alpha <- 1-conf.level
 J <- length(c.weights)

@@ -26,7 +26,7 @@ context of forming confidence intervals for the population standardized mean dif
 Either the value of \code{delta} given \code{lambda} or \code{lambda} given \code{delta} (and the \emph{per group} sample sizes).
 }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \seealso{\code{smd}, \code{ci.smd}, \code{ss.aipe.smd}}
 \examples{

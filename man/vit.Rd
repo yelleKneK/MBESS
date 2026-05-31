@@ -46,10 +46,10 @@ plot.points = TRUE, save.pdf = FALSE, save.eps = FALSE,
 
 %\references{ }
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) and Po-Ju Wu (Indiana University)}
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) and Po-Ju Wu (Indiana University)}
 %\note{ }
 
-\seealso{ par, nlme, vit.fitted,  }
+\seealso{ par, nlme, vit.fitted }
 
 \examples{
 \dontrun{

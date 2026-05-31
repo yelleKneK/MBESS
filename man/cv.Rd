@@ -21,7 +21,7 @@ Returns the estimated coefficient of variation (regular but biased estimate or u
 }
 %\references{}
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 %\note{}
 \seealso{\code{\link{ci.cv}}}
 \examples{

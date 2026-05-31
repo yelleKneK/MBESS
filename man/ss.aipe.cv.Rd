@@ -31,7 +31,7 @@ Suppress.Statement = TRUE, sup.int.warns = TRUE, ...)
 %\details{}
 \value{Returns the necessary sample size given the input specifications.}
 %\references{}
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 %\note{}
 \seealso{\code{ss.aipe.cv.sensitivity}, \code{cv}}
 \examples{

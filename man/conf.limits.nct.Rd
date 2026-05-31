@@ -51,10 +51,10 @@ difference: Bootstrap and parametric confidence intervals, \emph{Educational and
 Kelley, K. (2007). Constructing confidence intervals for standardized effect sizes: Theory, application, and implementation. \emph{Journal of Statistical Software, 20} (8), 1--24.
 
 Steiger, J. & Fouladi, T. (1997). Noncentrality interval estimation and the evaluation of statistical models. In L. Harlow, 
-S. Muliak, & J. Steiger (Eds.), \emph{What if there were no significance tests?}. Mahwah, NJ: Lawrence Erlbaum.
+S. Mulaik, & J. Steiger (Eds.), \emph{What if there were no significance tests?}. Mahwah, NJ: Lawrence Erlbaum.
 
 }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \section{Warning}{At the present time, the largest \code{ncp} that R can accurately handle is 37.62.
 }

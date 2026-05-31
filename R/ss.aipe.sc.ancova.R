@@ -15,8 +15,11 @@ if(!is.null(rho))
 if(divisor=="s.ancova")
     {options(warn=-1)
     
-    if(sum(c.weights)!=0) stop("The sum of the contrast weights must be zero")
-    if(sum(c.weights[c.weights>0])>1) stop("Please use fractions to specify the contrast weights")
+  if(identical(sum(c.weights > 1), 0)) stop("Please use fractional values to specify the contrast weights (i.e., no contrast weights above 1.")
+  if(identical(sum(c.weights < -1), 0)) stop("Please use fractional values to specify the contrast weights (i.e., no contrast weights less than -1.")
+  if(!identical(round(sum(c.weights), 4), 0)) stop("The sum of the contrast weights ('c.weights') should equal zero.")
+  
+  
     if(is.null(psi))
         {if(is.null(Psi) | is.null(sigma.ancova)) stop("You must specifiy either 'psi', or both 'Psi' and 'sigma.ancova'.")
         psi<- Psi/sigma.ancova

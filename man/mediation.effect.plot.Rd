@@ -58,7 +58,7 @@ Preacher, K. J., & Kelley, K. (2011). Effect size measures for mediation models:
 
 Sy, O. S. (2004). \emph{Multilevel mediation analysis: Estimation and applications}. Unpublished dissertation, Kansas State University.
 }
-\author{Ken Kelley (University of Notre Dame; KKelley@nd.edu)}
+\author{Ken Kelley (University of Notre Dame; kkelley@nd.edu)}
 
 \note{Requires raw data.}
 

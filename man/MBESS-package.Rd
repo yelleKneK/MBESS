@@ -18,30 +18,28 @@
 	an acronym for 'Methods for the Behavioral, Educational, and Social Sciences,' but MBESS became
 	more general and now contains methods applicable and used in a wide variety of fields and is an 
 	orphan acronym, in the sense that what was an acronym is now literally its name. MBESS has 
-	greatly benefited from others, see <https://www3.nd.edu/~kkelley/site/MBESS.html> for a detailed 
-	list of those that have contributed and other details.
+	greatly benefited from the contributions of many people. See the CONTRIBUTORS file
+	in the installed package for a detailed list of contributors and their contributions.
 }
 \details{
 \tabular{ll}{
 Package: \tab MBESS\cr
 Type: \tab Package\cr
-Version: \tab 4.8.1 \cr
-Date: \tab 2021-10-16\cr
-License: \tab GPL(>=2)\cr
+Version: \tab 5.0.0 \cr
+Date: \tab 2026-05-31\cr
+License: \tab GPL-2 | GPL-3\cr
 }
-Please read the manual and visit the corresponding web site 
-\url{https://www3.nd.edu/~kkelley/site/MBESS.html} 
-for information on the capabilities of the \code{MBESS} package. Feel free 
+Please read the help files for information on the capabilities of the \code{MBESS} package. Feel free 
 to contact me if there is a feature you would like to see added if it would 
 complement the goals of the MBESS package. Beginning with version 
 4.8.0, the package also has a home on GitHub \url{https://github.com/yelleKneK/MBESS}. 
 Over the years, multiple people have contributed functions to the package. See individual 
-functions for details. 
+functions for details. MBESS is stable and in maintenance mode; ongoing methodological development now happens in its successor package, DMAR (Design, Measurement, and Analysis in R), which is currently in development. Users seeking modernized interfaces to these methods are encouraged to follow DMAR as it matures. 
 }
 \author{
-Ken Kelley <\email{KKelley@ND.Edu}; https://www3.nd.edu/~kkelley/> 
+Ken Kelley <\email{kkelley@nd.edu}; https://kenkelley.org/> 
 
-Maintainer: Ken Kelley <\email{KKelley@ND.Edu}; https://www3.nd.edu/~kkelley/>
+Maintainer: Ken Kelley <\email{kkelley@nd.edu}; https://kenkelley.org/>
 }
 
 \keyword{package}

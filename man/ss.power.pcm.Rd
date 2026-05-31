@@ -27,7 +27,7 @@ N = NULL, alpha.level = 0.05, standardized = TRUE, directional = FALSE)
 \references{ Raudenbush, S. W., & X-F., Liu. (2001). Effects of study duration, frequency of observation, 
 and sample size on power in studies of group differences in polynomial change. \emph{Psychological Methods, 6}, 387--401.  }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 %\note{}
 %\seealso{ ~~objects to See Also as \code{\link{help}}, ~~~ }

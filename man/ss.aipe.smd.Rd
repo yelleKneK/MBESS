@@ -56,13 +56,13 @@ statistical methods. In L. L. Harlow, S. A. Mulaik, & J. H. Steiger (Eds.), \emp
 no significance tests?} (pp. 221-257). Mahwah, NJ: Lawrence Erlbaum.
 }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \note{The function \code{ss.aipe.smd} is the preferred function, and is the one that is recommended for widespread use.
 The functions \code{ss.aipe.smd.lower}, \code{ss.aipe.smd.upper} and 
 \code{ss.aipe.smd.full} are called from the \code{ss.aipe.smd} function.}
 
-\section{Warning}{Finding sample size for lower and uppper confidence limits is approximate, but very close to being exact. The \code{pt()} function is limited to accurate values 
+\section{Warning}{Finding sample size for lower and upper confidence limits is approximate, but very close to being exact. The \code{pt()} function is limited to accurate values 
 when the the noncentral parameter is less than 37.62.} 
 
 \seealso{\code{smd}, \code{smd.c}, \code{ci.smd}, \code{ci.smd.c}, 

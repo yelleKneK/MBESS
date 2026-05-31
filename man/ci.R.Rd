@@ -39,7 +39,7 @@ function.
 
 For random predictors, the function implements the procedure of Lee (1971), which was implemented
 by Algina and Olejnik (2000; specifically in their \emph{ci.smcc.bisec.sas} SAS script). When 
-\code{Random.Predictors=TRUE}, the function implements code that is in part based on the Alginia and
+\code{Random.Predictors=TRUE}, the function implements code that is in part based on the Algina and
 Olejnik (2000) SAS script.
 
 When \code{Random.Predictors=FALSE}, and thus the predictors are planned and thus fixed in hypothetical
@@ -70,7 +70,7 @@ instruments and computers, 4}, 581--582.
 
 }
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 %\note{ }
 \seealso{ \code{ci.R2}, \code{ss.aipe.R2}, \code{conf.limits.nct} }
 %\examples{}

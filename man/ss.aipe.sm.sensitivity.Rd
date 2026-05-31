@@ -74,7 +74,7 @@ Steiger, J. H., & Fouladi, R. T. (1997). Noncentrality interval estimation and t
 statistical methods. In L. L. Harlow, S. A. Mulaik, & J.H. Steiger (Eds.), \emph{What if there were
 no significance tests?} (pp. 221--257). Mahwah, NJ: Lawrence Erlbaum. }
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}); Keke Lai}
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}); Keke Lai}
 %\note{ }
 
 \seealso{ \code{ss.aipe.sm}}

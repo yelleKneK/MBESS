@@ -30,7 +30,7 @@ Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd ed
 
 Muirhead, R. J. (1985). Estimating a particular function of the multiple correlation coefficient. \emph{Journal of the American Statistical Association,  80}, 923--925.
 }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \seealso{
 \code{ci.R2}, \code{ss.aipe.R2}

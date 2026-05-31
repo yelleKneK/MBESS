@@ -23,7 +23,7 @@ Returns the variance of the of the squared multiple correlation coefficient.
 Stuart, A., Ord, J. K., & Arnold, S. (1999). \emph{Kendall's advanced theory of statistics: {C}lassical inference and the linear model} (Volume 2A, 2nd Edition).
 New York, NY: Oxford University Press.}
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 \note{
 Uses package \code{gsl} and its \code{hyperg_2F1} function.
 }

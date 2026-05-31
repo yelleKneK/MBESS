@@ -38,15 +38,15 @@ and implementation. \emph{Journal of Statistical Software, 20} (8), 1--24.
 Kelley, K., & Rausch, J. R. (2006). Sample size planning for the standardized mean difference: 
 Accuracy in Parameter Estimation via narrow confidence intervals. \emph{Psychological Methods, 11(4)}, 363--385.
 
-Lai, K., & Kelley, K. (2007). Sample size planning for standardized ANCOVA and ANOVA 
-contrasts: Obtaining narrow confidence intervals. \emph{Manuscript submitted for publication}.
+Lai, K., & Kelley, K. (2012). Accuracy in parameter estimation for ANCOVA and ANOVA contrasts: Sample size planning via narrow confidence intervals.
+\emph{British Journal of Mathematical and Statistical Psychology, 65}, 350--370.
 
 Steiger, J. H., & Fouladi, R. T. (1997). Noncentrality interval estimation and the evaluation of
 statistical methods. In L. L. Harlow, S. A. Mulaik, & J.H. Steiger (Eds.), \emph{What if there were
 no significance tests?} (pp. 221--257). Mahwah, NJ: Lawrence Erlbaum. }
 
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}); Keke Lai }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}); Keke Lai }
 %\note{ }
 
 \seealso{ \code{ci.sc}, \code{conf.limits.nct}, \code{ss.aipe.c} }

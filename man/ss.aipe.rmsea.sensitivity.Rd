@@ -26,7 +26,7 @@ conf.level=0.95, G=200, save.file="sim.results.txt", ...)
   \item{\dots}{  allows one to potentially include parameter values for inner functions}
 
 }
-\details{This function implements the sample size planning methods proposed in Kelley and Lai (2010). It depends on the 
+\details{This function implements the sample size planning methods proposed in Kelley and Lai (2011). It depends on the
 function \code{\link[sem]{sem}} in the \code{sem} package to fit the proposed model to random data, and uses the same notation to specify SEM 
 models as does \code{\link[sem]{sem}}. Please refer to \code{\link[sem]{sem}} for more detailed documentation 
 about model specifications, the RAM notation, and model fitting techniques. For technical discussion 
@@ -56,12 +56,12 @@ Cudeck, R., & Browne, M. W. (1992). Constructing a covariance matrix that yields
 
 Fox, J. (2006). Structural equation modeling with the sem package in R. \emph{Structural Equation Modeling, 13}, 465--486.
 
-Kelley, K., & Lai, K. (2010). Accuracy in parameter estimation for the root mean square of approximation: Sample size planning for narrow confidence intervals. \emph{Manuscript under review}.
+Kelley, K., & Lai, K. (2011). Accuracy in parameter estimation for the root mean square error of approximation: Sample size planning for narrow confidence intervals. \emph{Multivariate Behavioral Research}, \emph{46}, 1--32.
 
 McArdle, J. J., & McDonald, R. P. (1984). Some algebraic properties of the reticular action model. \emph{British Journal of Mathematical and Statistical Psychology, 37}, 234--251.
 }
 \author{
-Keke Lai (University of California -- Merced) and Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})
+Keke Lai (University of California -- Merced) and Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})
 }
 \note{Sometimes this function jumps out of the loop before it finishes the simulation. The reason is because the 
  \code{\link[sem]{sem}} function that this function calls to fit the model fails to converge when searching for
@@ -82,7 +82,7 @@ EXAMPLE 1
 ######################### 
 # To replicate the simulation in the first panel, second column of 
 # Table 2 (i.e., population RMSEA=0.0268, df=23, desired width=0.02) 
-# in Lai and Kelley (2010), the following steps can be used.
+# in Lai and Kelley (2011), the following steps can be used.
 
 ## STEP 1: Obtain the (correct) population covariance matrix implied by Model 2
 # This requires the model and its population model parameter values.
@@ -140,7 +140,7 @@ Sigma.theta <- res$Sigma.theta
 # Then 'Sigma.theta' is the (true) population covariance matrix
 
 ## STEP 2: Create a misspecified model
-# The following model is misspecified in the same way as did Lai and Kelley (2010)
+# The following model is misspecified in the same way as did Lai and Kelley (2011)
 # with the goal to obtain a relatively small population RMSEA
 
 model.2.mis<-specifyModel()

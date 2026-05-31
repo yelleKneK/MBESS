@@ -49,7 +49,7 @@ To input the predictor z, one can use either the mean and standard deviation of 
 analysis for the behavioral sciences} (3rd ed.). Mahwah, NJ: Erlbaum.}
 
 
-\author{ Keke Lai, Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})  }
+\author{ Keke Lai, Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})  }
 
 \note{ Sometimes some of the regression lines are outside the default scope of the coordinates 
 and thus cannot be seen; in such situations, one needs to, by entering additional arguments, adjust the scope to

@@ -41,7 +41,7 @@ The function yields the variance of the estimated treatment effect for the speci
 \references{
 Maxwell, S. E., Delaney, H. D., & Kelley, K. (2018).  \emph{Designing experiments and analyzing data:  A model comparison perspective}.  New York:  Routledge.
 
-Li, L., McLouth, C. J., and Delaney, H. D. (submitted). Analysis of Covariance with Heterogeneity of Regression and a Random Covariate: The Variance of the Estimated Treatment Effect at Selected Covariate Values.
+Li, L., McLouth, C. J., & Delaney, H. D. (2020). Analysis of Covariance in Randomized Experiments with Heterogeneity of Regression and a Random Covariate: The Variance of the Estimated Treatment Effect at Selected Covariate Values. \emph{Multivariate Behavioral Research}, \emph{55}, 926--940.
 }
 \author{
 Li Li (University of New Mexico; \email{llis@unm.edu})

@@ -1,22 +1,26 @@
 ss.aipe.c <- function(error.variance=NULL, c.weights, width, conf.level=.95, assurance=NULL, certainty=NULL, MSwithin=NULL, 
 SD=NULL, ...)
 { 
+    
+# Checks
 ####################################################################
 if(is.null(error.variance) & is.null(MSwithin) & is.null(SD)) stop ("You must specify the variability of the contrast (e.g., 'error.variance', 'MSwithin', or 'SD'")
 
-if(!is.null(assurance)& !is.null(certainty))
+if(!is.null(assurance) & !is.null(certainty))
     {if(assurance!=certainty) stop("'assurance' and 'certainty' must have the same value")}
-if(!is.null(certainty)) assurance<- certainty 
+if(!is.null(certainty)) assurance <- certainty 
 
 if(!is.null(error.variance) & !is.null(MSwithin)) {if (error.variance!=MSwithin) stop ("You provided discrepant information about the estimated standard deviation of the contrast")}
-if(!is.null(error.variance)& !is.null(SD)) {if (error.variance!=SD^2) stop ("You provided discrepant information about the estimated standard deviation of the contrast")}
-if(!is.null(MSwithin)& !is.null(SD)) {if(MSwithin!=SD^2) stop ("You provided discrepant information about the estimated standard deviation of the contrast")}
+if(!is.null(error.variance) & !is.null(SD)) {if (error.variance!=SD^2) stop ("You provided discrepant information about the estimated standard deviation of the contrast")}
+if(!is.null(MSwithin) & !is.null(SD)) {if(MSwithin!=SD^2) stop ("You provided discrepant information about the estimated standard deviation of the contrast")}
 
 if(is.null(error.variance)& !is.null(MSwithin)) error.variance<- MSwithin
 if(is.null(error.variance)& !is.null(SD)) error.variance<- SD^2
 
-if(sum(c.weights)!=0) stop("The sum of the coefficients must be zero")
-if(sum(c.weights[c.weights>0])>1) stop("Please use fractions to specify the contrast weights")
+if(identical(sum(c.weights > 1), 0)) stop("Please use fractional values to specify the contrast weights (i.e., no contrast weights above 1.")
+if(identical(sum(c.weights < -1), 0)) stop("Please use fractional values to specify the contrast weights (i.e., no contrast weights less than -1.")
+if(!identical(round(sum(c.weights), 4), 0)) stop("The sum of the contrast weights ('c.weights') should equal zero.")
+
 #####################################################################
 alpha <- 1-conf.level
 J <- length(c.weights)

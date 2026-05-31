@@ -38,12 +38,12 @@ regression coefficient for \code{b.j}.}
 Kelley, K. & Maxwell, S. E. (2003). Sample size for Multiple Regression: Obtaining regression coefficients that are accurate, not simply significant. 
 \emph{Psychological Methods, 8}, 305--321.
 
-Kelley, K. & Maxwell, S. E. (2008). Sample Size Planning with applications to multiple regression: Power and accuracy for omnibus and targeted effects. In P. Alasuuta, J. Brannen, & L. Bickman (Eds.), \emph{The Sage handbook of social research methods} (pp. 166--192). Newbury Park, CA: Sage.
+Kelley, K. & Maxwell, S. E. (2008). Sample Size Planning with applications to multiple regression: Power and accuracy for omnibus and targeted effects. In P. Alasuutari, J. Brannen, & L. Bickman (Eds.), \emph{The Sage handbook of social research methods} (pp. 166--192). Newbury Park, CA: Sage.
 
 Smithson, M. (2003). \emph{Confidence intervals}. New York, NY: Sage Publications. 
 }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 
 \note{Not all of the values need to be specified, only those that
 contain all of the necessary information in order to compute the

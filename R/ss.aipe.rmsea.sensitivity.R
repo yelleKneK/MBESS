@@ -10,7 +10,7 @@ result.file<- save.file
 print("Simulation results will be saved to a text file after each replication") 
 suppressWarnings(file.exist<-try(read.table(result.file), silent=TRUE))
 if(!is.null(dim(file.exist))) cat("A file in the local directory has the same name as the file where simulation","\n", "results will be saved to. Simulation results will be appended to this file.","\n", sep="")
-M.fit <- sem(model, Sigma, 1000000)
+M.fit <- sem::sem(model, Sigma, 1000000)
 rmsea <- summary(M.fit)$RMSEA[1]
 df <- summary(M.fit)$df
 

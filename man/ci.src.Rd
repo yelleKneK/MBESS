@@ -14,7 +14,7 @@ alpha.lower = NULL, alpha.upper = NULL, Suppress.Statement = FALSE, ...)
 
 \arguments{
   \item{beta.k}{ the standardized regression coefficient }
-  \item{SE.beta.k}{the standard error of the standarized regression coefficient }
+  \item{SE.beta.k}{the standard error of the standardized regression coefficient }
   \item{N}{ sample size }
   \item{K}{ the number of predictors }
   \item{R2.Y_X}{ the squared multiple correlation coefficient predicting \emph{Y} from the \emph{k} predictor variables }
@@ -48,10 +48,10 @@ formation using the noncentral \emph{t}-distribution.
 \references{ 
 Kelley, K. (2007). Constructing confidence intervals for standardized effect sizes: Theory, application, and implementation. \emph{Journal of Statistical Software, 20} (8), 1--24.
 
-Kelley, K., & Maxwel, S. E. (2003). Sample size for Multiple Regression: Obtaining regression
+Kelley, K., & Maxwell, S. E. (2003). Sample size for Multiple Regression: Obtaining regression
 coefficients that are accurate, not simply significant. \emph{Psychological Methods, 8}, 305--321.
 
-Kelley, K., & Maxwell, S. E. (2008). Sample Size Planning with applications to multiple regression: Power and accuracy for omnibus and targeted effects. In P. Alasuuta, J. Brannen, & L. Bickman (Eds.), \emph{The Sage handbook of social research methods} (pp. 166--192). Newbury Park, CA: Sage.
+Kelley, K., & Maxwell, S. E. (2008). Sample Size Planning with applications to multiple regression: Power and accuracy for omnibus and targeted effects. In P. Alasuutari, J. Brannen, & L. Bickman (Eds.), \emph{The Sage handbook of social research methods} (pp. 166--192). Newbury Park, CA: Sage.
 
 Smithson, M. (2003). \emph{Confidence intervals}. New York, NY: Sage Publications. 
 
@@ -59,7 +59,7 @@ Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence interval
 Analysis of Variance and Contrast Analysis. \emph{Psychological Methods, 9}, 164--182.
 }
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 
 \note{ 
 This function calls upon \code{ci.reg.coef} in MBESS, but has a different naming scheme. See  \code{ci.reg.coef} for more details.

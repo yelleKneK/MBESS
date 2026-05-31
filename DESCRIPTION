@@ -1,8 +1,8 @@
 Package: MBESS
 Type: Package
 Title: The MBESS R Package
-Version: 4.9.3
-Date: 2023-10-24
+Version: 5.0.0
+Date: 2026-05-31
 Authors@R: c(person("Ken", "Kelley", role=c("aut", "cre"), email="kkelley@nd.edu"))
 Maintainer: Ken Kelley <kkelley@nd.edu>
 Depends: R (>= 3.5.0), stats
@@ -21,8 +21,7 @@ Description: Implements methods that are useful in designing research studies an
 	an acronym for 'Methods for the Behavioral, Educational, and Social Sciences,' but MBESS became
 	more general and now contains methods applicable and used in a wide variety of fields and is an 
 	orphan acronym, in the sense that what was an acronym is now literally its name. MBESS has 
-	greatly benefited from others, see <https://www3.nd.edu/~kkelley/site/MBESS.html> for a detailed 
-	list of those that have contributed and other details.
+	greatly benefited from the contributions of many people over the years, who are
+	acknowledged in the package documentation.
 License: GPL-2 | GPL-3
-URL: https://www3.nd.edu/~kkelley/site/MBESS.html
-RoxygenNote: 7.2.3
+URL: https://kenkelley.org/r-packages/

@@ -9,7 +9,7 @@ s.u(s=NULL, N=NULL, X=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{s}{the usual estimate of the standard deviation (i.e., the square root of the unibased estimate of the variance)}
+  \item{s}{the usual estimate of the standard deviation (i.e., the square root of the unbiased estimate of the variance)}
   \item{N}{sample size \code{s} is based}
   \item{X}{vector of scores in which the unbiased estimate of the standard deviation should be calculated}
 }
@@ -23,7 +23,7 @@ The unbiased estimate for the standard deviation.
 Holtzman, W. H. (1950). The unbiased estimate of the population variance and standard deviation. \emph{American 
 Journal of Psychology}, \emph{63}, 615--617.
 }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 %\note{}
 %\seealso{}
 \examples{

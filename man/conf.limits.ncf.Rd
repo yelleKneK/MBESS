@@ -35,7 +35,7 @@ This function is the relied upon by the \code{ci.R2} and \code{ss.aipe.R2}. If t
   \item{Prob.Greater.Upper}{Proportion of cases falling above \code{Upper.Limit}}
 }
 %\references{ ~put references to the literature/web site here ~ }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}); Keke Lai (University of Califonia-Merced)}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}); Keke Lai (University of California-Merced)}
 
 \seealso{\code{ss.aipe.R2}, \code{ci.R2}, \code{conf.limits.nct}}
 \examples{

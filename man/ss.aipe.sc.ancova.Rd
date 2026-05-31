@@ -64,8 +64,8 @@ no significance tests?} (pp. 221--257). Mahwah, NJ: Lawrence Erlbaum.}
 When \code{divisor="s.anova"} and the argument \code{assurance} is specified, the necessary
 sample size \emph{per group} returned by the function with \code{assurance} specified is slightly underestimated. 
 The method to obtain exact sample size in the above situation has not been developed yet. A practical solution is
-to use the sample size returned as the starting value to conduct a priori Montre Carlo simulations with 
-function \code{\link{ss.aipe.sc.ancova.sensitivity}}, as discussed in Lai & Kelley (under review).
+to use the sample size returned as the starting value to conduct a priori Monte Carlo simulations with 
+function \code{\link{ss.aipe.sc.ancova.sensitivity}}, as discussed in Lai & Kelley (2012).
  }
 
 \seealso{ \code{ss.aipe.sc}, \code{ss.aipe.sc.ancova.sensitivity} }

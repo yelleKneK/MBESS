@@ -38,7 +38,7 @@ Maxwell, S. E., & Delaney, H. D. (2004). \emph{Designing experiments and analyzi
 comparison perspective}. Mahwah, NJ: Erlbaum.
 }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}); Keke Lai <Lai.15@ND.Edu> }
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}); Keke Lai <Lai.15@ND.Edu> }
 
 %\note{}
 

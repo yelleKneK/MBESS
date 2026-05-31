@@ -26,7 +26,7 @@ covmat.from.cfm(Lambda, Psi.Square, tol.det = 1e-05)
 }
 \references{McDonald, R. P. (1999). \emph{Test theory: A unified approach}. Mahwah, NJ: Erlbaum.}
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}); 
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}); 
 Leann Terry (Indiana University; \email{ljterry@Indiana.Edu})
 }
 

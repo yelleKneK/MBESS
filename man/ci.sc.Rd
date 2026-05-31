@@ -43,15 +43,15 @@ alpha.lower = NULL, alpha.upper = NULL, df.error = NULL, ...)
 \references{ 
 Kelley, K. (2007). Constructing confidence intervals for standardized effect sizes: Theory, application, and implementation. \emph{Journal of Statistical Software, 20} (8), 1--24.
 
-Lai, K., & Kelley, K. (2007). Sample size planning for standardized ANCOVA and ANOVA 
-contrasts: Obtaining narrow confidence intervals. \emph{Manuscript submitted for publication}.
+Lai, K., & Kelley, K. (2012). Accuracy in parameter estimation for ANCOVA and ANOVA contrasts: Sample size planning via narrow confidence intervals.
+\emph{British Journal of Mathematical and Statistical Psychology, 65}, 350--370.
 
 Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence intervals and tests of close fit in the 
 Analysis of Variance and Contrast Analysis. \emph{Psychological Methods, 9}, 164--182.  
 
 }
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 
 \note{
 Be sure to use the standard deviation and not the error variance for \code{s.anova}, not the square of this value (the error variance) which would come from the source table (i.e., do not use the variance of the error but rather use its square root, the standard deviation).
@@ -59,7 +59,7 @@ Be sure to use the standard deviation and not the error variance for \code{s.ano
 Be sure to use the error variance and not its square root (i.e., use the variance of the  standard deviation of the errors).
 Be sure to use the standard deviations of errors for \code{s.anova} and \code{s.ancova}, not the square of these values (i.e., do not use the variance of the errors).
 
-Be sure to use fractional \emph{c}-weights when doing complex contrasts (not integers) to specify \code{c.weights}. For exmaple, in an ANCOVA of four groups, if the user wants to compare the mean of group 1 and 2 with the mean of group 3 and 4, \code{c.weights} should be specified as c(0.5, 0.5, -0.5, -0.5) rather than c(1, 1, -1, -1). Make sure the sum of the contrast weights are zero.
+Be sure to use fractional \emph{c}-weights when doing complex contrasts (not integers) to specify \code{c.weights}. For example, in an ANCOVA of four groups, if the user wants to compare the mean of group 1 and 2 with the mean of group 3 and 4, \code{c.weights} should be specified as c(0.5, 0.5, -0.5, -0.5) rather than c(1, 1, -1, -1). Make sure the sum of the contrast weights are zero.
 
 
 }

@@ -55,11 +55,11 @@ satisfied for the confidence interval for a particular regression coefficient gi
 }
 
 \references{ 
-Kelley, K. & Maxwel, S. E. (2003). Sample size for Multiple Regression: Obtaining regression
+Kelley, K. & Maxwell, S. E. (2003). Sample size for Multiple Regression: Obtaining regression
 coefficients that are accuracy, not simply significant. \emph{Psychological Methods, 8}, 305--321.
  }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 \note{ 
 This function calls upon \code{ss.aipe.reg.coef} in MBESS but has a different naming scheme. See \code{ss.aipe.reg.coef} 
 for more details. 

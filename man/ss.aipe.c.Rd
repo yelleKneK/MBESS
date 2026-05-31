@@ -30,16 +30,16 @@ assurance = NULL, certainty = NULL, MSwithin = NULL, SD = NULL, ...)
 
 \references{
 Kelley, K., Maxwell, S. E., & Rausch, J. R. (2003). Obtaining power or obtaining 
-precesion: Delineating methods of sample size planning. \emph{Evaluation and the Health Professions, 26}, 258--287.
+precision: Delineating methods of sample size planning. \emph{Evaluation and the Health Professions, 26}, 258--287.
 
 Maxwell, S. E., & Delaney, H. D. (2004). \emph{Designing experiments and analyzing data: A model 
 comparison perspective}. Mahwah, NJ: Erlbaum.
 }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}), Keke Lai }
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}), Keke Lai }
 
 \note{
-Be sure to use the error varaince and not its square root (i.e., the standard deviation of the errors).
+Be sure to use the error variance and not its square root (i.e., the standard deviation of the errors).
 }
 
 \seealso{\code{ss.aipe.sc}, \code{ss.aipe.c.ancova}, \code{ci.c}}

@@ -41,7 +41,7 @@ Kelley, K. (2007). Constructing confidence intervals for standardized effect siz
 McKay, A. T. (1932). Distribution of the coefficient of variation and the extended \emph{t} distribution, \emph{Journal of the Royal Statistical Society}, \emph{95}, 695--698.
 }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 %\note{ ~~further notes~~ 
 %
 % ~Make other sections like Warning with \section{Warning }{....} ~

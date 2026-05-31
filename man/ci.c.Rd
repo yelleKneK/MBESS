@@ -39,7 +39,7 @@ Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence interval
 analysis of variance and contrast analysis. \emph{Psychological Methods, 9}, 164--182.
 }
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 
 \note{Be sure to use the standard deviation and not the error variance for \code{s.anova}, not the square of this value (the error variance) which would come from the source table (i.e., do not use the variance of the error but rather use its square root, the standard deviation).
 

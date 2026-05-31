@@ -28,9 +28,9 @@ limits (\code{alpha.lower} and \code{alpha.upper}).
 
 The square root of the signal-to-noise ratio is defined as the standard deviation due to the particular factor over the 
 standard deviation of the error (i.e., the square root of the mean square error). This function uses the confidence 
-interval transformation principle (Steiger, 2004) to transform the confidence limits for the noncentality 
+interval transformation principle (Steiger, 2004) to transform the confidence limits for the noncentrality 
 parameter to the confidence limits for square root of signal-to-noise ratio. The confidence interval 
-for noncentral \emph{F} parameter can be abtained from function \code{conf.limits.ncf} in MBESS. 
+for noncentral \emph{F} parameter can be obtained from function \code{conf.limits.ncf} in MBESS. 
 }
 \value{
  
@@ -47,7 +47,7 @@ Kelley, K. (2007). Constructing confidence intervals for standardized effect siz
 
 Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence intervals and tests of close fit in the Analysis of Variance and Contrast Analysis. \emph{Psychological Methods, 9}, 164--182.  }
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 
 % \note{ }
 \seealso{ \code{ci.snr}, \code{conf.limits.ncf} }
@@ -55,7 +55,7 @@ Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence interval
 ## To illustrate the calculation of the confidence interval for noncentral 
 ## F parameter,Bargman (1970) gave an example in which a 5-group ANOVA with 
 ## 11 subjects in each group is conducted and the observed F value is 11.2213. 
-## This exmaple continued to be used in Venables (1975),  Fleishman (1980), 
+## This example continued to be used in Venables (1975),  Fleishman (1980), 
 ## and Steiger (2004). If one wants to calculate the exact confidence interval 
 ## for square root of the signal-to-noise ratio of that example, this 
 ## function can be used.

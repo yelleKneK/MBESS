@@ -48,7 +48,7 @@ statistical methods. In L. L. Harlow, S. A. Mulaik, & J. H. Steiger (Eds.), \emp
 no significance tests?} (pp. 221--257). Mahwah, NJ: Lawrence Erlbaum.
 }
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \section{Warning}{
 This function uses \code{conf.limits.nct}, which has as one of its arguments \code{tol} 

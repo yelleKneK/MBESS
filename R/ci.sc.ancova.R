@@ -3,8 +3,8 @@ function(Psi=NULL, adj.means=NULL, s.anova=NULL, s.ancova=NULL, standardizer="s.
 {options(warn=-1)
 if(standardizer=="s.anova")
 {
-if(is.null(s.anova)) stop("'s.anova' is needed to standardized the contrast (this is the standard deviation of the errors from the ANOVA model)")
-if(missing(s.ancova)) stop("'s.ancova' is needed to standardized the contrast (even when using 's.anova' as the standardizer; this is the standard deviation of the errors from the ANCOVA model).")
+if(is.null(s.anova)) stop("'s.anova' is needed to standardize the contrast (this is the standard deviation of the errors from the ANOVA model)")
+if(missing(s.ancova)) stop("'s.ancova' is needed to standardize the contrast (even when using 's.anova' as the standardizer; this is the standard deviation of the errors from the ANCOVA model).")
 }
 if(standardizer!="s.ancova" & standardizer!="s.anova") stop("The standardizer must be either 's.anova' or 's.ancova'.")
 

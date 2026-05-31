@@ -12,9 +12,10 @@ if(divisor=="s.ancova")
     if (is.null(estimated.psi) & is.null(selected.n)) stop("You must specify either \'estimated.psi\' or \'selected.n\' (i.e., the sample size per group).", call.=FALSE)
     if (!is.null(estimated.psi) & !is.null(selected.n)) stop("You must specify either \'estimated.psi\' or \'selected.n\' (i.e., the sample size per group), but not both.", call.=FALSE)
     
-    if (sum(c.weights)!=0) stop("The sum of the contrast weights must be zero")
-    if (sum(c.weights[c.weights>0])>1) stop("Please use fractions to specify the contrast weights")
-    
+  if(identical(sum(c.weights > 1), 0)) stop("Please use fractional values to specify the contrast weights (i.e., no contrast weights above 1.")
+  if(identical(sum(c.weights < -1), 0)) stop("Please use fractional values to specify the contrast weights (i.e., no contrast weights less than -1.")
+  if(!identical(round(sum(c.weights), 4), 0)) stop("The sum of the contrast weights ('c.weights') should equal zero.")
+  
     J<- length(c.weights)
     width<-desired.width
     sigma.ancova<-2

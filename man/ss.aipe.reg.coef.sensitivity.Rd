@@ -41,7 +41,7 @@ coefficient, so that the covariance/correlation structure can be specified when 
 
 \references{Kelley, K. & Maxwell, S. E. (2003). Sample size for Multiple Regression: Obtaining regression coefficients that are accuracy, not simply significant. \emph{Psychological Methods, 8}, 305--321.}
 
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \note{Note that when \code{True.Rho.YX}=\code{Estimated.Rho.YX} and \code{True.RHO.XX}=\code{Estimated.RHO.XX}, the results are not
 literally from a sensitivity analysis, rather the function performs a standard simulation study. A simulation study 

@@ -60,7 +60,7 @@ ss.aipe.crd.both.fixedwidth(width, cluscost=0, indivcost=1, prtreat, tauy=NULL,
 	The residual variance in the within level before accounting for the covariate
   }
   \item{totalvar}{
-	The total resiudal variance before accounting for the covariate
+	The total residual variance before accounting for the covariate
   }
   \item{iccy}{
 	The intraclass correlation of the dependent variable
@@ -99,7 +99,7 @@ ss.aipe.crd.both.fixedwidth(width, cluscost=0, indivcost=1, prtreat, tauy=NULL,
 	The \code{ss.aipe.crd.nclus.fixedwidth} and \code{ss.aipe.crd.nclus.fixedbudget} functions provide the number of clusters. The \code{ss.aipe.crd.nindiv.fixedwidth} and \code{ss.aipe.crd.nindiv.fixedbudget} functions provide the cluster size. The \code{ss.aipe.crd.both.fixedbudget} and \code{ss.aipe.crd.both.fixedwidth} provide the number of clusters and the cluster size, respectively.
 }
 \references{
-Pornprasertmanic, S., & Schneider, W. J. (2014). Accuracy in parameter estimation in cluster randomized designs. \emph{Psychological Methods}, \emph{19}, 356--379.
+Pornprasertmanit, S., & Schneider, W. J. (2014). Accuracy in parameter estimation in cluster randomized designs. \emph{Psychological Methods}, \emph{19}, 356--379.
 
 }
 \author{

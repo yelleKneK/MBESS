@@ -3,7 +3,7 @@
 
 \title{ Plot power of Two One-Sided Tests Procedure (TOST) for Equivalence}
 \description{
-A function to plot the power of the two one-sided tests prodedure (TOST) for various alternatives. (See also package \code{equivalence}, function \code{tost}.)
+A function to plot the power of the two one-sided tests procedure (TOST) for various alternatives. (See also package \code{equivalence}, function \code{tost}.)
 }
 \usage{
 power.equivalence.md.plot(alpha, logscale, theta1, theta2, sigma, n, nu, title2)

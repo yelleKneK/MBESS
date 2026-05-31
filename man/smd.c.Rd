@@ -39,7 +39,7 @@ Hedges, L. V. (1981). Distribution theory for Glass's Estimator of effect size a
 Glass, G. (1976). Primary, secondary, and meta-analysis of research. \emph{Educational Researcher, 5}, 3--8.  
 
 }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \seealso{
 \code{smd}, \code{conf.limits.nct}}

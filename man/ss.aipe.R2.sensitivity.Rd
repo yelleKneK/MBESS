@@ -37,7 +37,7 @@ rho.xx = 0.3,  G = 10000, print.iter = TRUE, ...)
 When \code{Estimated.R2}=\code{True.R2}, the results are that of a simulation study when all assumptions
 are satisfied. Rather than specifying \code{Estimated.R2}, one can specify \code{Selected.N} to determine the results of a particular sample size (when doing this \code{Estimated.R2} cannot be specified).
 
-The sample size estimation procedure technically assumes multivariate normal variables (\code{p}+1) with fixed predictors (\code{x}/indepdent variables), 
+The sample size estimation procedure technically assumes multivariate normal variables (\code{p}+1) with fixed predictors (\code{x}/independent variables), 
 yet the function assumes random multivariate normal predictors (having a \code{p}+1 multivariate distribution). As Gatsonis and Sampson (1989) note in the context of statistical 
 power analysis (recall this function is used in the context of precision), there is little difference in the outcome.
 
@@ -67,9 +67,9 @@ and hypothesis testing for the squared multiple correlation. \emph{Behavior rese
 Kelley, K. (2008). Sample size planning for the squared multiple correlation coefficient:
 Accuracy in parameter estimation via narrow confidence intervals, \emph{Multivariate Behavioral Research, 43}, 524--555.
 
-Kelley, K. & Maxwell, S. E. (2008). Sample Size Planning with applications to multiple regression: Power and accuracy for omnibus and targeted effects. In P. Alasuuta, J. Brannen, & L. Bickman (Eds.), \emph{The Sage handbook of social research methods} (pp. 166--192). Newbury Park, CA: Sage.
+Kelley, K. & Maxwell, S. E. (2008). Sample Size Planning with applications to multiple regression: Power and accuracy for omnibus and targeted effects. In P. Alasuutari, J. Brannen, & L. Bickman (Eds.), \emph{The Sage handbook of social research methods} (pp. 166--192). Newbury Park, CA: Sage.
 }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \seealso{\code{ci.R2}, \code{conf.limits.nct}, \code{ss.aipe.R2}}
 \examples{

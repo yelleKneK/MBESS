@@ -3,7 +3,7 @@
 \title{Confidence limits for noncentral chi square parameters}
 \description{
 Function to determine the noncentral parameter that leads to the observed \code{Chi.Square}-value, 
-so that a confidence interval for the population noncentral chi-squrae value can be formed.
+so that a confidence interval for the population noncentral chi-square value can be formed.
 }
 \usage{conf.limits.nc.chisq(Chi.Square=NULL, conf.level=.95, df=NULL, 
 alpha.lower=NULL, alpha.upper=NULL, tol=1e-9, Jumping.Prop=.10)
@@ -31,7 +31,7 @@ If the function fails (or if a function relying upon this function fails), adjus
   \item{Prob.Greater.Upper}{Proportion of cases falling above \code{Upper.Limit}}
 }
 %\references{ ~put references to the literature/web site here ~ }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu});
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu});
 Keke Lai (University of California--Merced)
 }
 

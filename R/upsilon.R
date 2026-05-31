@@ -2,16 +2,16 @@ upsilon <- function(x, mediator, dv, conf.level = 0.95, bootstrap = TRUE, bootst
 data <- data.frame(x=x,mediator=mediator,dv=dv)
 med.model <- paste0(paste0(colnames(data)[2],'~',colnames(data)[1]),' \n ',paste0(colnames(data)[3],'~',colnames(data)[1],'+',colnames(data)[2]))
 med.res <- lavaan::sem(med.model,data)
-upsilon <- lavaan::coef(med.res)[1]**2*lavaan::coef(med.res)[3]**2*lavaan::inspectSampleCov(med.model,data)$cov['x','x']/lavaan::inspectSampleCov(med.model,data)$cov['dv','dv']
-adj.upsilon <- (lavaan::coef(med.res)[1]**2-lavaan::vcov(med.res)[1,1])*(lavaan::coef(med.res)[3]**2-lavaan::vcov(med.res)[3,3])*lavaan::inspectSampleCov(med.model,data)$cov['x','x']/lavaan::inspectSampleCov(med.model,data)$cov['dv','dv']
+upsilon <- lavaan::coef(med.res)[1]**2*lavaan::coef(med.res)[3]**2*lavaan::lavInspect(med.res, "sampstat")$cov['x','x']/lavaan::lavInspect(med.res, "sampstat")$cov['dv','dv']
+adj.upsilon <- (lavaan::coef(med.res)[1]**2-lavaan::vcov(med.res)[1,1])*(lavaan::coef(med.res)[3]**2-lavaan::vcov(med.res)[3,3])*lavaan::lavInspect(med.res, "sampstat")$cov['x','x']/lavaan::lavInspect(med.res, "sampstat")$cov['dv','dv']
 
 if(bootstrap == TRUE){
 if(bootstrap.package == 'lavaan'){
 lavaan.med.boot.fun <- function(out){
 data.boot <- lavaan::lavInspect(out,what = "data")
 colnames(data.boot) <- lavaan::lavNames(out)
-upsilon.boot <- lavaan::coef(out)[1]**2*lavaan::coef(out)[3]**2*lavaan::inspectSampleCov(med.model,data.boot)$cov['x','x']/lavaan::inspectSampleCov(med.model,data.boot)$cov['dv','dv']
-adj.upsilon.boot <- (lavaan::coef(out)[1]**2-lavaan::vcov(out)[1,1])*(lavaan::coef(out)[3]**2-lavaan::vcov(out)[3,3])*lavaan::inspectSampleCov(med.model,data.boot)$cov['x','x']/lavaan::inspectSampleCov(med.model,data.boot)$cov['dv','dv']
+upsilon.boot <- lavaan::coef(out)[1]**2*lavaan::coef(out)[3]**2*lavaan::lavInspect(out, "sampstat")$cov['x','x']/lavaan::lavInspect(out, "sampstat")$cov['dv','dv']
+adj.upsilon.boot <- (lavaan::coef(out)[1]**2-lavaan::vcov(out)[1,1])*(lavaan::coef(out)[3]**2-lavaan::vcov(out)[3,3])*lavaan::lavInspect(out, "sampstat")$cov['x','x']/lavaan::lavInspect(out, "sampstat")$cov['dv','dv']
 as.vector(c(upsilon.boot,adj.upsilon.boot))
 }
 cat('Bootstrapping may take several minutes \n \n')
@@ -31,8 +31,8 @@ boot.med.boot.fun <- function(out,i){
 data.boot <- out[i,]
 colnames(data.boot) <- colnames(out)
 out.boot <- lavaan::sem(med.model,data.boot)
-upsilon.boot <- lavaan::coef(out.boot)[1]**2*lavaan::coef(out.boot)[3]**2*lavaan::inspectSampleCov(med.model,data.boot)$cov['x','x']/lavaan::inspectSampleCov(med.model,data.boot)$cov['dv','dv']
-adj.upsilon.boot <- (lavaan::coef(out.boot)[1]**2-lavaan::vcov(out.boot)[1,1])*(lavaan::coef(out.boot)[3]**2-lavaan::vcov(out.boot)[3,3])*lavaan::inspectSampleCov(med.model,data.boot)$cov['x','x']/lavaan::inspectSampleCov(med.model,data.boot)$cov['dv','dv']
+upsilon.boot <- lavaan::coef(out.boot)[1]**2*lavaan::coef(out.boot)[3]**2*lavaan::lavInspect(out.boot, "sampstat")$cov['x','x']/lavaan::lavInspect(out.boot, "sampstat")$cov['dv','dv']
+adj.upsilon.boot <- (lavaan::coef(out.boot)[1]**2-lavaan::vcov(out.boot)[1,1])*(lavaan::coef(out.boot)[3]**2-lavaan::vcov(out.boot)[3,3])*lavaan::lavInspect(out.boot, "sampstat")$cov['x','x']/lavaan::lavInspect(out.boot, "sampstat")$cov['dv','dv']
 as.vector(c(upsilon.boot,adj.upsilon.boot))
 }
 cat('Bootstrapping may take several minutes \n \n')

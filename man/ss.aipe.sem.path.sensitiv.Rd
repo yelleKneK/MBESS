@@ -24,7 +24,7 @@ G = 100, ...)
   \item{\dots}{ allows one to potentially include parameter values for inner functions }
 }
 
-\details{This function implements the sample size planning methods proposed in Lai and Kelley (2010). It depends on the 
+\details{This function implements the sample size planning methods proposed in Lai and Kelley (2011). It depends on the 
 function \code{\link[sem]{sem}} in the \code{sem} package to calculate the expected information matrix, and uses the same notation to specify SEM 
 models as does \code{\link[sem]{sem}}. Please refer to \code{\link[sem]{sem}} for more detailed documentation 
 about model specifications, the RAM notation, and model fitting techniques. For technical discussion 
@@ -48,7 +48,7 @@ on how to obtain the model implied covariance matrix in the RAM notation given m
 \references{ 
 Fox, J. (2006). Structural equation modeling with the sem package in R. \emph{Structural Equation Modeling, 13}, 465--486.
 
-Lai, K., & Kelley, K. (in press). Accuracy in parameter estimation for targeted effects in structural equation modeling: Sample size planning for narrow confidence intervals. \emph{Psychological Methods}.
+Lai, K., & Kelley, K. (2011). Accuracy in parameter estimation for targeted effects in structural equation modeling: Sample size planning for narrow confidence intervals. \emph{Psychological Methods}, \emph{16}, 127--148.
 
 McArdle, J. J., & McDonald, R. P. (1984). Some algebraic properties of the reticular action model. \emph{British Journal of Mathematical and Statistical Psychology, 37}, 234--251.  }
 \author{ Keke Lai (University of California -- Merced) and Ken Kelley \email{kkelley@nd.edu} }
@@ -62,7 +62,7 @@ the simulation can proceed with unsuccessful iterations.}
 \examples{
 \dontrun{
 # Suppose the model of interest is Model 2 of the simulation study in 
-# Lai and Kelley (2010), and the goal is to obtain a 95\% confidence 
+# Lai and Kelley (2011), and the goal is to obtain a 95\% confidence 
 # interval for 'beta21' no wider than 0.3.
 
 library(sem)

@@ -19,7 +19,7 @@ Returns the necessary total sample size in order to achieve the desired
 degree of accuracy (i.e., the sufficiently narrow confidence interval). 
 }
 %\references{  }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) and Keke Lai}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) and Keke Lai}
 %\note{}
 \seealso{ \code{\link{ci.rmsea}}}
 \examples{

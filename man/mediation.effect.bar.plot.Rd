@@ -40,7 +40,7 @@ Preacher, K. J., & Kelley, K. (2011). Effect size measures for mediation models:
 }
 
 
-\author{Ken Kelley (University of Notre Dame; KKelley@nd.edu)}
+\author{Ken Kelley (University of Notre Dame; kkelley@nd.edu)}
 %\note{}
 \seealso{\code{\link{mediation}}, \code{\link{mediation.effect.bar.plot}}}
 %\examples{}

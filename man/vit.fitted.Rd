@@ -34,11 +34,11 @@ save.jpg = FALSE, file = "", ...)
 
 %\references{ }
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) and Po-Ju Wu (Indiana University; \email{pojwu@indiana.edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) and Po-Ju Wu (Indiana University; \email{pojwu@indiana.edu}) }
 
 %\note{ }
 
-\seealso{ par, nlme, lme4, lme, lmer, vit.fitted }
+\seealso{ par, nlme, lme4, lme, lmer, vit }
 
 \examples{
 \dontrun{

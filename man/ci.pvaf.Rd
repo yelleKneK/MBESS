@@ -43,7 +43,7 @@ Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence interval
 Analysis of Variance and Contrast Analysis. \emph{Psychological Methods, 9}, 164--182.}
 
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 \note{ 
 This function can be used for single or factorial ANOVA designs.
 }

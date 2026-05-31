@@ -20,7 +20,7 @@ final.iter = 5000, start.ss = NULL, verbose=FALSE)
   \item{width}{ the desired full width of the confidence interval}
   \item{S}{ a symmetric covariance matrix}
   \item{conf.level}{ the desired confidence interval coverage, (i.e., 1- Type I error rate) }
-  \item{assurance}{ parameter to ensure that the obtained confidence interval width is narrower than the desired width with a specificied degree of certainty}
+  \item{assurance}{ parameter to ensure that the obtained confidence interval width is narrower than the desired width with a specified degree of certainty}
   \item{data}{the data set that the reliability coefficient is obtained from}
   \item{i}{ number of items }
   \item{cor.est}{ the estimated inter-item correlation }
@@ -48,7 +48,7 @@ van Zyl, J. M., Neudecker, H., & Nel, D. G. (2000). On the distribution of the m
 of Cronbach's alpha. \emph{Psychometrika, 65} (3), 271--280. }
 
 \author{Leann J. Terry (Indiana University; \email{ljterry@Indiana.Edu});
-Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \note{ Not all of the items can be entered into the function to represent the population values. For example, either 'data' can be used, or \code{S}, or  \code{i}, \code{cor.est}, and \code{psi.square}, or \code{i}, \code{lambda}, and \code{psi.square}. With a
 large number of iterations (\code{final.iter}) this function may take considerable time.}
@@ -80,7 +80,7 @@ ss.aipe.reliability (model='True Score', type='Normal Theory', width=.1, i=5,
                      cor.est=.3, psi.square=c(.2, .3, .3, .2, .3), conf.level=.95, 
                      assurance=.85, initial.iter=500, final.iter=5000)                 
 
-# Now, a congeneric model is used with the factor analytic appraoch. This is likely the 
+# Now, a congeneric model is used with the factor analytic approach. This is likely the 
 # most realistic scenario (and maps onto the ideas of Coefficient Omega). 
 ss.aipe.reliability (model='Congeneric', type='Factor Analytic', width=.1, i=5, 
 lambda=c(.4, .4, .3, .3, .5), psi.square=c(.2, .4, .3, .3, .2), conf.level=.95, 

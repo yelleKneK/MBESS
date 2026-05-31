@@ -9,7 +9,7 @@
 	Find target sample sizes for the accuracy in standardized conditions means estimation in CRD
 }
 \description{
-	Find target sample sizes (the number of clusters, cluster size, or both) for the accuracy in standardized conditions means estimation in CRD. If users wish to seek for both types of sample sizes simultaneously, an additional constraint is required, such as a desired width or a desired budget. This function uses the likelihood-based confidence interval (Cheung, 2009) by the \code{OpenMx} package (Boker et al., 2011). See further details at Pornprasertmanit and Schneider (2010, submitted).
+	Find target sample sizes (the number of clusters, cluster size, or both) for the accuracy in standardized conditions means estimation in CRD. If users wish to seek for both types of sample sizes simultaneously, an additional constraint is required, such as a desired width or a desired budget. This function uses the likelihood-based confidence interval (Cheung, 2009) by the \code{OpenMx} package (Boker et al., 2011). See further details at Pornprasertmanit and Schneider (2010, 2014).
 }
 \usage{
 ss.aipe.crd.es.nclus.fixedwidth(width, nindiv, es, estype = 1, iccy, prtreat, 
@@ -128,7 +128,7 @@ parameters with structural equation models. \emph{Structural Equation Modeling,
 
 Pornprasertmanit, S., & Schneider, W. J. (2010). \emph{Efficient sample size for power and desired accuracy in Cohen's d estimation in two-group cluster randomized design} (Master Thesis). Illinois State University, Normal, IL. 
 
-Pornprasertmanic, S., & Schneider, W. J. (2014). Accuracy in parameter estimation in cluster randomized designs. \emph{Psychological Methods}, \emph{19}, 356--379.}
+Pornprasertmanit, S., & Schneider, W. J. (2014). Accuracy in parameter estimation in cluster randomized designs. \emph{Psychological Methods}, \emph{19}, 356--379.}
 \author{
 Sunthud Pornprasertmanit (\email{psunthud@gmail.com})
 }

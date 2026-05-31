@@ -30,7 +30,7 @@ predictor variables are random, which is the default in this function.
 
 For random predictors, the function implements the procedure of Lee (1971), which was implemented by 
 Algina and Olejnik (2000; specifically in their \emph{ci.smcc.bisec.sas} SAS script). When \code{Random.Predictors=TRUE},
-the function implements code that is in part based on the Alginia and Olejnik (2000) SAS script. 
+the function implements code that is in part based on the Algina and Olejnik (2000) SAS script. 
 
 When \code{Random.Predictors=FALSE}, and thus the predictors are planned and thus fixed in 
 hypothetical replications of the study, the confidence limits are based on a
@@ -59,7 +59,7 @@ Steiger, J. H. & Fouladi, R. T. (1992) R2: A computer program for interval estim
 and hypothesis testing for the squared multiple correlation. \emph{Behavior research methods, instruments and computers, 4}, 581--582.
 
 }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 
 \seealso{\code{ss.aipe.R2}, \code{conf.limits.ncf}}
 \examples{

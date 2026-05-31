@@ -21,7 +21,7 @@ Print.Progress = FALSE, ...)
   \item{Specified.N}{the sample size used to calculate power (rather than determine necessary sample size)}
   \item{Cohen.f2}{Cohen's (1988) effect size for multiple regression: \code{Population.R2}/(1-\code{Population.R2})}
   \item{Null.R2}{value of the null hypothesis that the squared multiple correlation will be evaluated against (this will typically be zero)}
-  \item{Print.Progress}{if the progress of the iterative procedure is printed to the screen as the iterations are occuring}
+  \item{Print.Progress}{if the progress of the iterative procedure is printed to the screen as the iterations are occurring}
   \item{\dots}{possible additional parameters for internal functions}
 }
 \details{
@@ -31,7 +31,7 @@ Determine the necessary sample size given a particular \code{Population.R2}, \co
   \item{Sample.Size}{returns either \code{Necessary.Sample.Size} or \code{Specified.Sample.Size}, depending on if sample size is being determined for a desired degree of statistical power analysis or if statistical power is being determined given a specified sample size, respectively}
   \item{Actual.Power}{Actual power of the situation described}
 }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 \note{
 When determining sample size for a desired degree of power, there will always be a 
 slightly larger degree of actual power. This is the case because the algorithm employed 

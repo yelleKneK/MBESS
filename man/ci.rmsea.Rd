@@ -27,7 +27,7 @@ returns the upper and lower limit as well as the observed value of the RMSEA.
 Steiger, J. H., & Lind, J. C. (1980). \emph{Statistically-based tests for the number of common 
 factors}. Paper presented at the annual Spring meeting of the Psychometric Society, Iowa City, IA.
 }
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 %\note{ }
 %\seealso{  }
 %\examples{}

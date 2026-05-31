@@ -1,0 +1,49 @@
+citHeader('To cite the MBESS package in publications, please use:')
+
+if (!exists('meta') || is.null(meta)) meta <- packageDescription('MBESS')
+year <- if (!is.null(meta$Date) && nzchar(meta$Date)) sub('-.*', '', meta$Date) else format(Sys.Date(), '%Y')
+vers <- paste('R package version', meta$Version)
+
+c(
+  bibentry(
+    bibtype     = 'Manual',
+    title       = '{MBESS}: The {MBESS} {R} Package',
+    author      = person('Ken', 'Kelley'),
+    year        = year,
+    note        = vers,
+    url         = 'https://CRAN.R-project.org/package=MBESS',
+    textVersion = paste0(
+      'Kelley, K. (', year, '). MBESS (Version ', meta$Version,
+      ') [computer software and manual]. Retrieved from ',
+      'https://CRAN.R-project.org/package=MBESS'
+    )
+  ),
+  bibentry(
+    bibtype     = 'Article',
+    title       = 'Methods for the Behavioral, Educational, and Social Sciences: An {R} Package',
+    author      = person('Ken', 'Kelley'),
+    journal     = 'Behavior Research Methods',
+    year        = '2007',
+    volume      = '39',
+    pages       = '979--984',
+    textVersion = paste0(
+      'Kelley, K. (2007). Methods for the Behavioral, Educational, and Social ',
+      'Sciences: An R Package. Behavior Research Methods, 39, 979-984.'
+    )
+  ),
+  bibentry(
+    bibtype     = 'Article',
+    title       = 'Confidence Intervals for Standardized Effect Sizes: Theory, Application, and Implementation',
+    author      = person('Ken', 'Kelley'),
+    journal     = 'Journal of Statistical Software',
+    year        = '2007',
+    volume      = '20',
+    number      = '8',
+    pages       = '1--24',
+    textVersion = paste0(
+      'Kelley, K. (2007). Confidence intervals for standardized effect sizes: ',
+      'Theory, application, and implementation. Journal of Statistical Software, ',
+      '20(8), 1-24.'
+    )
+  )
+)

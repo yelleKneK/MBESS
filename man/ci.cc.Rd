@@ -4,7 +4,7 @@
 Confidence interval for the population correlation coefficient
 }
 \description{
-This function is used to form a confidence interval for the population correlation coefficient. Note that this appraoch assumes that the variables the sample correlation coefficient are based are assumed to be bivariate normally distributed (e.g., Hays, 1994, Chapter 14). 
+This function is used to form a confidence interval for the population correlation coefficient. Note that this approach assumes that the variables the sample correlation coefficient are based are assumed to be bivariate normally distributed (e.g., Hays, 1994, Chapter 14). 
 }
 \usage{ci.cc(r, n, conf.level = 0.95, alpha.lower = NULL, alpha.upper = NULL)}
 \arguments{
@@ -15,7 +15,7 @@ This function is used to form a confidence interval for the population correlati
 \item{alpha.upper}{the Type I error rate for the upper confidence interval limit}
 }
 \details{
-Note that this appraoch to confidence intervals does will not generally lead to a symmetric confidence interval. The function first transforms $r$ into emph{Z}\' , forms a confidence interval for the population value (i.e., $zeta$), and then transforms the confidence limits for $zeta$ into the scale of the correlation coefficient. 
+Note that this approach to confidence intervals does will not generally lead to a symmetric confidence interval. The function first transforms \eqn{r} into \eqn{Z^\prime} , forms a confidence interval for the population value (i.e., \eqn{\zeta}), and then transforms the confidence limits for \eqn{\zeta} into the scale of the correlation coefficient. 
 }
 \value{
 \item{Lower.Limit }{lower limit of the confidence interval}
@@ -28,7 +28,7 @@ and implementation.\emph{ Journal of Statistical Software, 20}(8), 1--24.
 
 Hays, W. L. (1994). \emph{Statistics} (5th ed). Fort Worth, TX: Harcourt Brace College Publishers)
 }
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 
 \note{
 This confidence interval assumes that the two variables the correlation is based are bivariate normal. See Hays (2004, Chapter 14) for details. 

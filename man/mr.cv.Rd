@@ -5,7 +5,7 @@
 Minimum risk point estimation of the population coefficient of variation
 }
 \description{
-A function for the sequential estimation of the coefficient of variations with minimum risk. The function implements the ideas of Chattopadhyay and Kelley (in press), which considers study cost and accuracy of the estimated
+A function for the sequential estimation of the coefficient of variations with minimum risk. The function implements the ideas of Chattopadhyay and Kelley (2016), which considers study cost and accuracy of the estimated
 coefficient of variation simultaneously. 
 }
 \usage{
@@ -14,7 +14,7 @@ verbose=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{data}{the data for which to evalaute the function
+  \item{data}{the data for which to evaluate the function
   }
 \item{A}{\code{structural.cost}/\code{epsilon}^2; this is the structural cost that one is willing to pay in a study to estimate the coefficient of variation divided by the square of the desired difference (between the estimate and the parameter)
 }
@@ -44,7 +44,7 @@ The value of \code{epsilon} is context specific; the smaller the value the close
 \item{Is.Satisfied?}{A TRUE/FALSE statement of whether or not the risk function has been satisfied. If TRUE then sampling can stop as the stopping rule has been satisfied.}
 }
 \references{
-Chattopadhyay, B., & Kelley, K. (in press). Estimation of the Coefficient of Variation with Minimum Risk: A Sequential Method for Minimizing Sampling Error and Study Cost. \emph{Multivariate Behavioral Research}, \emph{X}, X--X.
+Chattopadhyay, B., & Kelley, K. (2016). Estimation of the coefficient of variation with minimum risk: A sequential method for minimizing sampling error and sampling cost. \emph{Multivariate Behavioral Research}, \emph{51}, 627--648.
 
 Kelley, K. (2007). Sample size planning for the coefficient of variation from the accuracy in parameter estimation approach. \emph{Behavior Research Methods, 39} \emph{4}, 755--766.
 
@@ -53,7 +53,7 @@ Kelley, K. (2007). Sample size planning for the coefficient of variation from th
 Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) and Bhargab Chattopadhyay (University of Texas - Dallas; \email{bhargab@utdallas.edu})
 }
 \note{
-When a study's aim is to estimate a parameter accurately, such as the coefficient of variation, the structural costs and the maximum probable error of the estimate (i.e., \eqn{\epsilon}) are combined to form \eqn{A}. When we say ``what the researcher is willing to pay," we literally mean the structural cost (\eqn{c}) the researcher is willing to invest in a study in order to estimate the parameter of interest with the desired degree of accuracy. This value is implicitly included (along with anticipated sampling cost) in grant applications for empirical studies when a certain amount of money is requested to conduct a study. If a researcher is willing to pay more and/or desire a smaller value of \eqn{\epsilon}, \eqn{A} is larger than it would have been. A larger \eqn{A} value will translate into a more expensive study, holding everything else constant. Notice that \eqn{A} is a fixed value in any investigation, as the researcher specifies \eqn{A} directly or by specifying its two components (structural cost and \eqn{\epsilon}) individually. However, what is not fixed but rather evaluated in multiple steps throughout the process is the sampling cost, as it is unknown the necessary sample size in order to accomplish the study's goal of achieving a sufficiently accurate estimate of the coefficient of variation. This is the core of our contributions: minimizing sampling cost, and thereby study cost, by using a sequential procedure that evaluates a stopping rule using the risk function to determine if the optimation criterion has been satisfied (based on the goals of the researcher and current information available). This function implements the ideas of  sampling error and the study costs are considered simultaneously, so that the cost is not higher than necessary for the tolerable sampling error.}
+When a study's aim is to estimate a parameter accurately, such as the coefficient of variation, the structural costs and the maximum probable error of the estimate (i.e., \eqn{\epsilon}) are combined to form \eqn{A}. When we say ``what the researcher is willing to pay," we literally mean the structural cost (\eqn{c}) the researcher is willing to invest in a study in order to estimate the parameter of interest with the desired degree of accuracy. This value is implicitly included (along with anticipated sampling cost) in grant applications for empirical studies when a certain amount of money is requested to conduct a study. If a researcher is willing to pay more and/or desire a smaller value of \eqn{\epsilon}, \eqn{A} is larger than it would have been. A larger \eqn{A} value will translate into a more expensive study, holding everything else constant. Notice that \eqn{A} is a fixed value in any investigation, as the researcher specifies \eqn{A} directly or by specifying its two components (structural cost and \eqn{\epsilon}) individually. However, what is not fixed but rather evaluated in multiple steps throughout the process is the sampling cost, as it is unknown the necessary sample size in order to accomplish the study's goal of achieving a sufficiently accurate estimate of the coefficient of variation. This is the core of our contributions: minimizing sampling cost, and thereby study cost, by using a sequential procedure that evaluates a stopping rule using the risk function to determine if the optimization criterion has been satisfied (based on the goals of the researcher and current information available). This function implements the ideas of  sampling error and the study costs are considered simultaneously, so that the cost is not higher than necessary for the tolerable sampling error.}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 

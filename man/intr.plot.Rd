@@ -3,7 +3,7 @@
 
 \title{  Regression Surface Containing Interaction }
 \description{
-To plot a three dimentional figure of a multiple regression surface containing one two-way interaction.
+To plot a three dimensional figure of a multiple regression surface containing one two-way interaction.
 }
 \usage{
 intr.plot(b.0, b.x, b.z, b.xz, x.min = NULL, x.max = NULL, z.min = NULL, 
@@ -23,7 +23,7 @@ line.wd = 2, gray.scale = FALSE, ticktype="detailed", ...)
   \item{n.z}{ number of elements in predictor vector z; number of points to be plotted on the regression surface; default is 50}
  \item{x}{ a specific predictor vector \code{x}, used instead of \code{x.max} and \code{x.min}}
   \item{z}{ a specific predictor vector \code{z}, used instead of \code{z.max} and \code{z.min} }
-   \item{col}{ color of the regression surface; default is lightbule}
+   \item{col}{ color of the regression surface; default is lightblue}
  \item{hor.angle}{ rotate the regression surface horizontally; default is -60 degree }
   \item{vert.angle}{ rotate the regression surface vertically; default is 15 degree }
  \item{xlab}{ title for the axis which the predictor \code{x} is on  }
@@ -48,7 +48,7 @@ If the user inputs specific predictor vectors, the function would plot the regre
 
 \references{Cohen, J., Cohen, P., West, S. G. and Aiken, L. S. (2003). \emph{Applied multiple regression/correlation analysis for the behavioral sciences} (3rd ed.). Mahwah, NJ: Erlbaum. }
 
-\author{Keke Lai (University of California -- Merced) and Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{Keke Lai (University of California -- Merced) and Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 
 \note{ If the user enters specific vectors instead of the ranges of predictors, please make sure
 elements in those vectors are in ascending order. This is required by function \code{persp}, which 

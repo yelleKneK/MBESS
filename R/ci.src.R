@@ -14,7 +14,7 @@ if(!is.null(SE.b.k)) SE.beta.k <- SE.b.k*(s.X/s.Y)
 }
 
 
-if(beta.k > 1.1) warning("This function is only for standardized regression coefficients. Is your 'b.k' in standarized units (the observed value), although possible, seems quite large?", call.=FALSE)
+if(beta.k > 1.1) warning("This function is only for standardized regression coefficients. The supplied value, although possible, seems quite large for a standardized coefficient; verify that 'b.k' is in standardized units.", call.=FALSE)
 
 result<-ci.reg.coef(b.j=beta.k, SE.b.j=SE.beta.k, s.Y=1, s.X=1, N=N, p=K, 
 R2.Y_X=R2.Y_X, R2.j_X.without.j=R2.k_X.without.k, conf.level=conf.level, 

@@ -60,14 +60,14 @@ coefficients that are accurate, not simply significant.\emph{ Psychological Meth
 
 Kelley, K. & Maxwell, S. E. (2008). Power and accuracy for omnibus and targeted effects:
 Issues of sample size planning with applications to Multiple Regression. \emph{Handbook of Social Research
-Methods}, J. Brannon, P. Alasuutari, and L. Bickman (Eds.). New York, NY: Sage Publications.
+Methods}, J. Brannen, P. Alasuutari, and L. Bickman (Eds.). New York, NY: Sage Publications.
 
 Smithson, M. (2003). \emph{Confidence intervals}. New York, NY: Sage Publications. 
 
 Steiger, J. H. (2004). Beyond the \emph{F} Test: Effect size confidence intervals and tests of close fit in the 
 Analysis of Variance and Contrast Analysis. \emph{Psychological Methods, 9}, 164--182.}
 
-\author{ Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu}) }
+\author{ Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu}) }
 
 \note{ Not all of the values need to be specified, only those that contain all of the necessary information
 in order to compute the confidence interval (options are thus given for the values that need to be

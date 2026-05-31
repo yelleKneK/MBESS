@@ -50,7 +50,7 @@ Maxwell, S. E. (2000). Sample size for multiple regression. \emph{Psychological 
 
 Cohen, J. (1988). \emph{Statistical power analysis for the behavioral sciences} (2nd ed.). Hillsdale, NJ: Erlbaum.
 }
-\author{Ken Kelley (University of Notre Dame; \email{KKelley@ND.Edu})}
+\author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 \seealso{\code{ss.aipe.reg.coef}, \code{ss.power.R2}, \code{conf.limits.ncf}}
 
 \examples{
