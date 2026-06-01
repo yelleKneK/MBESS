@@ -25,3 +25,4 @@ Description: Implements methods that are useful in designing research studies an
 	acknowledged in the package documentation.
 License: GPL-2 | GPL-3
 URL: https://kenkelley.org/r-packages/
+RoxygenNote: 7.3.2

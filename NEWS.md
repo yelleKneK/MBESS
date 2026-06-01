@@ -1,8 +1,14 @@
 # MBESS 5.0.0 (2026)
 
-Maintenance release. MBESS is now in maintenance mode; ongoing
-methodological development moves to the successor package, DMAR (Design,
-Measurement, and Analysis in R), available from CRAN.
+Maintenance release. MBESS is mature, stable, and widely used, and it
+remains fully supported. Maintenance mode does not mean the package is
+finished or abandoned: MBESS will continue to be maintained so that it
+keeps working with current versions of R and its dependencies, and it
+will remain on CRAN. New methodological development now takes place in
+the successor package, DMAR (Design, Measurement, and Analysis in R),
+which is available on CRAN. MBESS and DMAR are designed to coexist;
+existing code that relies on MBESS will keep working, so there is no
+need to migrate.
 
 * Documentation and references brought up to date. Citations that had
   previously appeared as "submitted", "in press", or "under review" now

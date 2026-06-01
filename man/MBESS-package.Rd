@@ -34,7 +34,7 @@ to contact me if there is a feature you would like to see added if it would
 complement the goals of the MBESS package. Beginning with version 
 4.8.0, the package also has a home on GitHub \url{https://github.com/yelleKneK/MBESS}. 
 Over the years, multiple people have contributed functions to the package. See individual 
-functions for details. MBESS is stable and in maintenance mode; ongoing methodological development now happens in its successor package, DMAR (Design, Measurement, and Analysis in R), which is currently in development. Users seeking modernized interfaces to these methods are encouraged to follow DMAR as it matures. 
+functions for details. MBESS is mature, stable, and widely used, and it remains fully supported. Maintenance mode does not mean the package is finished or abandoned: MBESS will continue to be maintained so that it keeps working with current versions of R and its dependencies, and it will remain on CRAN. New methodological development now takes place in its successor package, DMAR (Design, Measurement, and Analysis in R), which is available on CRAN. DMAR is where new methods will appear, and MBESS and DMAR are designed to coexist, so existing code that relies on MBESS will continue to work and there is no need to migrate. 
 }
 \author{
 Ken Kelley <\email{kkelley@nd.edu}; https://kenkelley.org/> 
