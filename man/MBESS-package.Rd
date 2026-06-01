@@ -26,7 +26,7 @@
 Package: \tab MBESS\cr
 Type: \tab Package\cr
 Version: \tab 5.0.0 \cr
-Date: \tab 2026-05-31\cr
+Date: \tab 2026-06-01\cr
 License: \tab GPL-2 | GPL-3\cr
 }
 Please read the help files for information on the capabilities of the \code{MBESS} package. Feel free 
