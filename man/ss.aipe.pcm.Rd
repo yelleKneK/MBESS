@@ -17,7 +17,7 @@ width, conf.level = 0.95, trend = "linear", assurance = NULL)
 \arguments{
   \item{true.variance.trend}{The variance of the individuals' true change coefficients (i.e., \eqn{\sigma^2_{\upsilon_m}} in Kelley & Rausch, 2011) for the polynomial trend (e.g., linear, quadratic, etc.) of interest.}
   \item{error.variance}{The true error variance (i.e., \eqn{\sigma^2_{\epsilon}} in Kelley & Rausch, 2011).}
-  \item{variance.true.minus.estimated.trend}{The variance of the difference between the \eqn{m}th true change coefficient minus the \eqn{m}th estimated change coefficient (i.e., \eqn{\sigma^2_{\hat{\pi}_{m} - \pi_{m}}} from Equation 19 in Kelley & Rausch, 2011).}
+  \item{variance.true.minus.estimated.trend}{The variance of the difference between the \eqn{m}th true change coefficient minus the \eqn{m}th estimated change coefficient (i.e., \eqn{\sigma^2_{\hat{\pi}_{m} - \pi_{m}}} from Equation 19 in Kelley & Rausch, 2011). When this quantity is supplied directly rather than computed from \code{error.variance}, it equals the error variance multiplied by \eqn{f^{2m}} (where \eqn{f} is the \code{frequency} and \eqn{m} is the order of the polynomial \code{trend}) and divided by the sum of squared polynomial weights of Raudenbush and Liu (2001). The factor \eqn{f^{2m}} equals 1 when \code{frequency} is 1, so it does not affect designs measured once per unit of time.}
   \item{duration}{The duration of the study.}
   \item{frequency}{The number of times measurement occurs within each unit of time. }
   \item{width}{width of the confidence interval}
@@ -31,7 +31,11 @@ width, conf.level = 0.95, trend = "linear", assurance = NULL)
 \value{
 Returns the necessary sample size for the combination of the desired goals and values of the population parameters for a specific design. 
 }
-\references{Kelley, K., & Rausch, J. R. (2011). Accuracy in parameter estimation for polynomial change models. \emph{Psychological Methods}.}
+\references{
+Kelley, K., & Rausch, J. R. (2011). Accuracy in parameter estimation for polynomial change models. \emph{Psychological Methods}.
+
+Raudenbush, S. W., & Liu, X. (2001). Effects of study duration, frequency of observation, and sample size on power in studies of group differences in polynomial change. \emph{Psychological Methods, 6}, 387--401.
+}
 
 \author{Ken Kelley (University of Notre Dame; \email{kkelley@nd.edu})}
 

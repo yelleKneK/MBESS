@@ -29,7 +29,7 @@ K.p <- 1/720
 if(trend=="cubic"|trend=="Cubic"|trend==3|trend=="CUBIC")
 {
 Trend <- 3
-K.p <- 1/1000800
+K.p <- 1/100800
 }
 
 
@@ -38,12 +38,12 @@ sum.c2.pm <- K.p * (factorial(M + Trend)/factorial(M - Trend - 1)) # K.p and thi
 if(!missing( variance.true.minus.estimated.trend))
 {
 if(missing(error.variance)) stop("You need to specify either 'error.variance' or ' variance.true.minus.estimated.trend'.")
-if(round(error.variance/sum.c2.pm, 3) !=  variance.true.minus.estimated.trend) stop("You specified both 'error.variance' and ' variance.true.minus.estimated.trend' and they are not consistent ( variance.true.minus.estimated.trend=error.variance/(sum of appropriate squared weights)).")
+if(round(error.variance*(frequency^(2*Trend))/sum.c2.pm, 3) !=  variance.true.minus.estimated.trend) stop("You specified both 'error.variance' and ' variance.true.minus.estimated.trend' and they are not consistent ( variance.true.minus.estimated.trend=error.variance/(sum of appropriate squared weights)).")
 }
 
 if(missing( variance.true.minus.estimated.trend))
 {
- variance.true.minus.estimated.trend <- error.variance/sum.c2.pm
+ variance.true.minus.estimated.trend <- error.variance*(frequency^(2*Trend))/sum.c2.pm
 }
 
 n.i.plus.1 <- M+2 
@@ -88,6 +88,7 @@ counter <- counter + 1
 past.ss <- c(past.ss, n.i.plus.1)
 n.i <- n.i.plus.1 
 nu.i <- 2*n.i-2
+critival.t.i <- qt(df=nu.i, (1-(1-conf.level)/2))
 critival.chi.square.i <- qchisq(df=nu.i, assurance)
 variance.pi.hat.gamma <- (critival.chi.square.i*(true.variance.trend+ variance.true.minus.estimated.trend))/nu.i
 n.i.plus.1 <- ceiling((8*(variance.pi.hat.gamma)*critival.t.i^2)/(width^2))

@@ -1,3 +1,29 @@
+# MBESS 5.0.1 (2026)
+
+Maintenance release. Corrects the sampling-variance scaling in the
+polynomial change model sample size planner `ss.aipe.pcm()`.
+
+* `ss.aipe.pcm()`: the single-subject sampling variance of the change
+  coefficient now includes the factor `frequency^(2m)` (where `m` is the
+  order of the polynomial trend), matching Raudenbush and Liu (2001) and
+  the companion power function `ss.power.pcm()`. Previously this factor
+  was omitted, so for designs measured more than once per unit of time
+  (`frequency` greater than 1) the planned sample size was too small and
+  the resulting confidence interval was wider than requested. Results
+  for `frequency = 1` are unchanged, including the published Kelley and
+  Rausch (2011) examples, which still return 278 and 316.
+* `ss.aipe.pcm()`: corrected the constant for a cubic trend from
+  `1/1000800` to the correct `1/100800` (that is, `(3!)^2 / (6! 7!)`).
+  The earlier value, a transcription error with an extra digit, inflated
+  the implied error variance for `trend = "cubic"` by a factor of about
+  9.93 and so overstated the planned sample size. Linear and quadratic
+  trends were unaffected.
+* `ss.aipe.pcm()`: in the assurance branch, the t critical value is now
+  recomputed as the sample size iterates rather than reusing the value
+  from the expected-width search. The numerical effect is small, but the
+  previous code used a critical value carrying the wrong degrees of
+  freedom.
+
 # MBESS 5.0.0 (2026)
 
 Maintenance release. MBESS is mature, stable, and widely used, and it

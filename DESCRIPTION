@@ -1,8 +1,8 @@
 Package: MBESS
 Type: Package
 Title: The MBESS R Package
-Version: 5.0.0
-Date: 2026-06-01
+Version: 5.0.1
+Date: 2026-06-03
 Authors@R: c(person("Ken", "Kelley", role=c("aut", "cre"), email="kkelley@nd.edu"))
 Maintainer: Ken Kelley <kkelley@nd.edu>
 Depends: R (>= 3.5.0), stats
