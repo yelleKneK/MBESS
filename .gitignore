@@ -6,3 +6,6 @@
 *.Rcheck/
 *.tar.gz
 CLAUDE.md
+doc/
+Meta/
+inst/doc/
