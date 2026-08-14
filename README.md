@@ -1,4 +1,4 @@
-# MBESS
+# MBESS <img src="man/figures/logo.png" align="right" height="139" alt="MBESS hex logo" />
 
 **MBESS** (pronounced 'em-bes') is an R package that implements methods
 useful in designing research studies and analyzing data, with particular

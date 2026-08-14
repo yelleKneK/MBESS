@@ -1,3 +1,22 @@
+# MBESS 5.1.0 (2026)
+
+Maintenance release. Corrects the seed handling in the cluster
+randomized design AIPE sample size planners.
+
+* The `ss.aipe.crd.es.*` planners (`ss.aipe.crd.es.nclus.fixedwidth`,
+  `ss.aipe.crd.es.nindiv.fixedwidth`, `ss.aipe.crd.es.nclus.fixedbudget`,
+  `ss.aipe.crd.es.nindiv.fixedbudget`, `ss.aipe.crd.es.both.fixedbudget`,
+  and `ss.aipe.crd.es.both.fixedwidth`) now default `seed` to `NULL`
+  instead of the fixed value `123321`. With the previous default, every
+  call silently reused the same seed, which made the a priori Monte Carlo
+  results look perfectly reproducible and misled users about the sampling
+  variability of the planned sample size. With `seed = NULL` the
+  simulation now draws from the current state of the random number
+  generator (honest variability), and the planner restores the caller's
+  RNG state on exit so that calling it does not perturb the user's random
+  number stream. Supplying an explicit integer `seed` still produces
+  reproducible results exactly as before.
+
 # MBESS 5.0.1 (2026)
 
 Maintenance release. Corrects the sampling-variance scaling in the

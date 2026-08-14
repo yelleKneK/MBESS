@@ -14,27 +14,27 @@
 \usage{
 ss.aipe.crd.es.nclus.fixedwidth(width, nindiv, es, estype = 1, iccy, prtreat, 
 	r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, 
-	conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, 
+	conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE,
 	numProc=NULL, cluscost=NULL, indivcost=NULL, diffsize=NULL)
 ss.aipe.crd.es.nindiv.fixedwidth(width, nclus, es, estype = 1, iccy, prtreat, 
 	r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, 
-	conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, 
+	conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE,
 	numProc=NULL, cluscost=NULL, indivcost=NULL, diffsize=NULL) 
 ss.aipe.crd.es.nclus.fixedbudget(budget, nindiv, cluscost, indivcost, nrep=NULL, 
 	prtreat=NULL, iccy=NULL, es=NULL, estype = 1, numpredictor = 0, 
 	iccz=NULL, r2within=NULL, r2between=NULL, assurance=NULL, 
-	seed=123321, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize=NULL)
+	seed=NULL, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize=NULL)
 ss.aipe.crd.es.nindiv.fixedbudget(budget, nclus, cluscost, indivcost, nrep=NULL, 
 	prtreat=NULL, iccy=NULL, es=NULL, estype = 1, numpredictor = 0, 
 	iccz=NULL, r2within=NULL, r2between=NULL, assurance=NULL, 
-	seed=123321, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize=NULL) 
+	seed=NULL, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize=NULL) 
 ss.aipe.crd.es.both.fixedbudget(budget, cluscost=0, indivcost=1, es, estype = 1, 
 	iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, 
-	conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, 
+	conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE,
 	numProc=NULL, diffsize=NULL)
 ss.aipe.crd.es.both.fixedwidth(width, cluscost=0, indivcost=1, es, estype = 1, 
 	iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, 
-	conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, 
+	conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE,
 	numProc=NULL, diffsize=NULL)
 }
 \arguments{
@@ -87,7 +87,7 @@ ss.aipe.crd.es.both.fixedwidth(width, cluscost=0, indivcost=1, es, estype = 1,
 	The number of replications used in a priori Monte Carlo simulation
   }
   \item{seed}{
-	A desired seed number
+	A desired seed number for the a priori Monte Carlo simulation. The default is \code{NULL}, in which case the current state of the random number generator is used (so results reflect honest sampling variability) and the caller's RNG state is restored on exit. Supply an integer to obtain reproducible results.
   }
   \item{multicore}{
 	Use multiple processors within a computer. Specify as \code{TRUE} to use it. 

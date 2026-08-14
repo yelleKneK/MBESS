@@ -1032,9 +1032,15 @@ if(covariate)
 }
 
 # Simulate multiple datasets and find the average of the width of CI of ES (with or without the degree of assurance)
-.findWidthCRDES <- function(nrep, nclus, ntreatclus, nindiv, iccy, es, estype = 1, totalvar=1, covariate=FALSE, iccz=NULL, r2within=NULL, r2between=NULL, totalvarz = 1, assurance=NULL, seed=123321, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize = NULL) {
-	set.seed(seed)
-	
+.findWidthCRDES <- function(nrep, nclus, ntreatclus, nindiv, iccy, es, estype = 1, totalvar=1, covariate=FALSE, iccz=NULL, r2within=NULL, r2between=NULL, totalvarz = 1, assurance=NULL, seed=NULL, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize = NULL) {
+	# The Monte Carlo always advances the RNG, so restore the caller's RNG
+	# state on exit unconditionally; only set the seed when one is supplied.
+	if (exists(".Random.seed", envir = .GlobalEnv)) {
+		.old.seed <- get(".Random.seed", envir = .GlobalEnv)
+		on.exit(assign(".Random.seed", .old.seed, envir = .GlobalEnv), add = TRUE)
+	}
+	if (!is.null(seed)) set.seed(seed)
+
 	# Create list of seed number
 	seedList <- as.list(sample(1:999999, nrep))
 	Result.l <- NULL
@@ -1065,7 +1071,7 @@ if(covariate)
 
 
 # Find the number of clusters given the specified width of ES and the cluster size
-.findNclusCRDES <- function(width, nindiv, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, numProc=NULL, diffsize=NULL) {
+.findNclusCRDES <- function(width, nindiv, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE, numProc=NULL, diffsize=NULL) {
 	if(numpredictor > 0 & is.null(iccz)) iccz <- iccy
 	if(numpredictor > 1) stop("Only one predictor is allowed.")
 	totalvar <- 1
@@ -1101,7 +1107,7 @@ if(covariate)
 }
 
 # Find the cluster size given the specified width of ES and the number of clusters
-.findNindivCRDES <- function(width, nclus, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, numProc=NULL, diffsize=NULL) {
+.findNindivCRDES <- function(width, nclus, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE, numProc=NULL, diffsize=NULL) {
 	if(numpredictor > 0 & is.null(iccz)) iccz <- iccy
 	if(numpredictor > 1) stop("Only one predictor is allowed.")
 	totalvar <- 1
@@ -1138,7 +1144,7 @@ if(covariate)
 }
 
 # Find the least expensive combination of the number of clusters and cluster size given the specified width of ES
-.findMinCostCRDES <- function(width, cluscost=0, indivcost=1, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, numProc=NULL, diffsize=NULL) {
+.findMinCostCRDES <- function(width, cluscost=0, indivcost=1, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE, numProc=NULL, diffsize=NULL) {
 	if(numpredictor > 0 & is.null(iccz)) iccz <- iccy
 	if(numpredictor > 1) stop("Only one predictor is allowed.")
 	totalvar <- 1
@@ -1188,7 +1194,7 @@ if(covariate)
 }
 
 # Find the least width of ES combination of the number of clusters and cluster size given the budget
-.findMinWidthCRDES <- function(budget, cluscost=0, indivcost=1, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, numProc=NULL, diffsize = NULL) {
+.findMinWidthCRDES <- function(budget, cluscost=0, indivcost=1, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE, numProc=NULL, diffsize = NULL) {
 	if(numpredictor > 0 & is.null(iccz)) iccz <- iccy
 	if(numpredictor > 1) stop("Only one predictor is allowed.")
 	totalvar <- 1
@@ -1234,7 +1240,7 @@ if(covariate)
 }
 
 
-ss.aipe.crd.es.nclus.fixedwidth <- function(width, nindiv, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, numProc=NULL, cluscost=NULL, indivcost=NULL, diffsize=NULL) {
+ss.aipe.crd.es.nclus.fixedwidth <- function(width, nindiv, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE, numProc=NULL, cluscost=NULL, indivcost=NULL, diffsize=NULL) {
 	suppressWarnings(result <- .findNclusCRDES(width=width, nindiv=nindiv, es=es, estype = estype, iccy=iccy, prtreat=prtreat, r2between = r2between, r2within = r2within, numpredictor = numpredictor, assurance=assurance, conf.level = conf.level, nrep = nrep, iccz = iccz, seed = seed, multicore = multicore, numProc=numProc, diffsize=diffsize))
 	calculatedCost <- NULL
 	if(!is.null(cluscost) && !is.null(indivcost)) calculatedCost <- .costCRD(result[1], nindiv, cluscost=cluscost, indivcost=indivcost, diffsize=diffsize)
@@ -1243,7 +1249,7 @@ ss.aipe.crd.es.nclus.fixedwidth <- function(width, nindiv, es, estype = 1, iccy,
 }
 
 
-ss.aipe.crd.es.nindiv.fixedwidth <- function(width, nclus, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, numProc=NULL, cluscost=NULL, indivcost=NULL, diffsize=NULL) {
+ss.aipe.crd.es.nindiv.fixedwidth <- function(width, nclus, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE, numProc=NULL, cluscost=NULL, indivcost=NULL, diffsize=NULL) {
 	suppressWarnings(result <- .findNindivCRDES(width=width, nclus=nclus, es=es, estype = estype, iccy=iccy, prtreat=prtreat, r2between = r2between, r2within = r2within, numpredictor = numpredictor, assurance=assurance, conf.level = conf.level, nrep = nrep, iccz = iccz, seed = seed, multicore = multicore, numProc=numProc, diffsize=diffsize))
 	calculatedCost <- NULL
 	if(!is.null(cluscost) && !is.null(indivcost)) calculatedCost <- .costCRD(nclus, result[1], cluscost=cluscost, indivcost=indivcost, diffsize=diffsize)
@@ -1252,7 +1258,7 @@ ss.aipe.crd.es.nindiv.fixedwidth <- function(width, nclus, es, estype = 1, iccy,
 }
 
 
-ss.aipe.crd.es.nclus.fixedbudget <- function(budget, nindiv, cluscost, indivcost, nrep=NULL, prtreat=NULL, iccy=NULL, es=NULL, estype = 1, numpredictor = 0, iccz=NULL, r2within=NULL, r2between=NULL, assurance=NULL, seed=123321, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize=NULL) {
+ss.aipe.crd.es.nclus.fixedbudget <- function(budget, nindiv, cluscost, indivcost, nrep=NULL, prtreat=NULL, iccy=NULL, es=NULL, estype = 1, numpredictor = 0, iccz=NULL, r2within=NULL, r2between=NULL, assurance=NULL, seed=NULL, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize=NULL) {
 	nclus <- .findNclusCRDBudget(budget=budget, nindiv=nindiv, cluscost=cluscost, indivcost=indivcost, diffsize=diffsize)
 	calculatedWidth <- NULL
 	if(!is.null(nrep) && !is.null(prtreat) && !is.null(nindiv) && !is.null(iccy)) {
@@ -1264,7 +1270,7 @@ ss.aipe.crd.es.nclus.fixedbudget <- function(budget, nindiv, cluscost, indivcost
 }
 
 
-ss.aipe.crd.es.nindiv.fixedbudget <- function(budget, nclus, cluscost, indivcost, nrep=NULL, prtreat=NULL, iccy=NULL, es=NULL, estype = 1, numpredictor = 0, iccz=NULL, r2within=NULL, r2between=NULL, assurance=NULL, seed=123321, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize=NULL) {
+ss.aipe.crd.es.nindiv.fixedbudget <- function(budget, nclus, cluscost, indivcost, nrep=NULL, prtreat=NULL, iccy=NULL, es=NULL, estype = 1, numpredictor = 0, iccz=NULL, r2within=NULL, r2between=NULL, assurance=NULL, seed=NULL, multicore=FALSE, numProc=NULL, conf.level=0.95, diffsize=NULL) {
 	nindiv <- .findNindivCRDBudget(budget=budget, nclus=nclus, cluscost=cluscost, indivcost=indivcost, diffsize=diffsize)
 	calculatedWidth <- NULL
 	if(!is.null(nrep) && !is.null(prtreat) && !is.null(nindiv) && !is.null(iccy)) {
@@ -1276,7 +1282,7 @@ ss.aipe.crd.es.nindiv.fixedbudget <- function(budget, nclus, cluscost, indivcost
 }
 
 
-ss.aipe.crd.es.both.fixedbudget <- function(budget, cluscost=0, indivcost=1, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, numProc=NULL, diffsize=NULL) {
+ss.aipe.crd.es.both.fixedbudget <- function(budget, cluscost=0, indivcost=1, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE, numProc=NULL, diffsize=NULL) {
 	suppressWarnings(result <- .findMinWidthCRDES(budget=budget, cluscost=cluscost, indivcost=indivcost, es=es, estype = estype, iccy=iccy, prtreat=prtreat, r2between = r2between, r2within = r2within, numpredictor = numpredictor, assurance=assurance, conf.level = conf.level, nrep = nrep, iccz = iccz, seed = seed, multicore = multicore, numProc=numProc, diffsize=diffsize))
 	calculatedCost <- .costCRD(result[1], result[2], cluscost=cluscost, indivcost=indivcost, diffsize=diffsize)
 	.reportCRD(result[1], result[2], result[3], cost=calculatedCost, es=TRUE, estype=estype, assurance=assurance, diffsize=diffsize) 
@@ -1284,7 +1290,7 @@ ss.aipe.crd.es.both.fixedbudget <- function(budget, cluscost=0, indivcost=1, es,
 }
 
 
-ss.aipe.crd.es.both.fixedwidth <- function(width, cluscost=0, indivcost=1, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = 123321, multicore = FALSE, numProc=NULL, diffsize=NULL) {
+ss.aipe.crd.es.both.fixedwidth <- function(width, cluscost=0, indivcost=1, es, estype = 1, iccy, prtreat, r2between = 0, r2within = 0, numpredictor = 0, assurance=NULL, conf.level = 0.95, nrep = 1000, iccz = NULL, seed = NULL, multicore = FALSE, numProc=NULL, diffsize=NULL) {
 	suppressWarnings(result <- .findMinCostCRDES(width=width, cluscost=cluscost, indivcost=indivcost, es=es, estype = estype, iccy=iccy, prtreat=prtreat, r2between = r2between, r2within = r2within, numpredictor = numpredictor, assurance=assurance, conf.level = conf.level, nrep = nrep, iccz = iccz, seed = seed, multicore = multicore, numProc=numProc, diffsize=diffsize))
 	.reportCRD(result[1], result[2], result[4], cost=result[3], es=TRUE, estype=estype, assurance=assurance, diffsize=diffsize) 
 	invisible(result[1:2])
