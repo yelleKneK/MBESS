@@ -1,0 +1,53 @@
+{
+  "title": "MBESS: The MBESS R Package",
+  "upload_type": "software",
+  "description": "<p>Implements methods that are useful in designing research studies and analyzing data, with particular emphasis on methods that are developed for or used within the behavioral, educational, and social sciences (broadly defined). That being said, many of the methods implemented within MBESS are applicable to a wide variety of disciplines. MBESS has a suite of functions for a variety of related topics, such as effect sizes, confidence intervals for effect sizes (including standardized effect sizes and noncentral effect sizes), sample size planning (from the accuracy in parameter estimation [AIPE], power analytic, equivalence, and minimum-risk point estimation perspectives), mediation analysis, various properties of distributions, and a variety of utility functions.<\/p><p>MBESS (pronounced \"em-bes\") was originally an acronym for \"Methods for the Behavioral, Educational, and Social Sciences,\" but MBESS became more general and now contains methods applicable and used in a wide variety of fields and is an orphan acronym, in the sense that what was an acronym is now literally its name. MBESS has greatly benefited from the contributions of many people over the years, who are acknowledged in the package documentation.<\/p><p>MBESS has been on CRAN since 2006 (https://CRAN.R-project.org/package=MBESS) and remains fully supported. New methodological development now takes place in its successor package, DMAR (Design, Measurement, and Analysis in R; https://CRAN.R-project.org/package=DMAR), a more modern, more general, and greatly expanded reimagining of MBESS; the two packages are designed to coexist. MBESS is licensed under GPL-2 or GPL-3 at the user's option.<\/p>",
+  "creators": [
+    {
+      "name": "Kelley, Ken",
+      "affiliation": "University of Notre Dame",
+      "orcid": "0000-0002-4756-8360"
+    }
+  ],
+  "license": "gpl-2.0-only",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "R package",
+    "effect sizes",
+    "confidence intervals",
+    "noncentral distributions",
+    "sample size planning",
+    "accuracy in parameter estimation",
+    "power analysis",
+    "mediation analysis",
+    "reliability",
+    "behavioral sciences",
+    "educational sciences",
+    "social sciences"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://CRAN.R-project.org/package=MBESS",
+      "relation": "isVariantFormOf",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.18637/jss.v020.i08",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.3758/BF03192993",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://github.com/yelleKneK/DMAR",
+      "relation": "isContinuedBy",
+      "resource_type": "software"
+    }
+  ],
+  "version": "5.0.1",
+  "publication_date": "2026-06-04"
+}
