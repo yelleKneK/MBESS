@@ -4,3 +4,5 @@
 \.DS_Store$
 ^CLAUDE\.md$
 ^dev$
+^CITATION\.cff$
+^\.zenodo\.json$

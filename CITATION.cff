@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+message: "If you use MBESS, please cite the package together with the two articles listed under references."
+type: software
+title: "MBESS: The MBESS R Package"
+authors:
+  - family-names: Kelley
+    given-names: Ken
+    orcid: "https://orcid.org/0000-0002-4756-8360"
+    affiliation: "University of Notre Dame"
+version: 5.0.1
+date-released: "2026-06-04"
+license:
+  - GPL-2.0-only
+  - GPL-3.0-only
+repository-code: "https://github.com/yelleKneK/MBESS"
+repository-artifact: "https://CRAN.R-project.org/package=MBESS"
+url: "https://kenkelley.org/r-packages/"
+abstract: >-
+  Implements methods that are useful in designing research studies and
+  analyzing data, with particular emphasis on methods developed for or used
+  within the behavioral, educational, and social sciences, broadly defined:
+  effect sizes, confidence intervals for effect sizes (including standardized
+  and noncentral effect sizes), sample size planning from the accuracy in
+  parameter estimation, power analytic, equivalence, and minimum-risk point
+  estimation perspectives, mediation analysis, properties of distributions,
+  and utility functions. On CRAN since 2006 and fully supported; new
+  methodological development now takes place in its successor package,
+  DMAR, and the two are designed to coexist.
+keywords:
+  - R package
+  - effect sizes
+  - confidence intervals
+  - noncentral distributions
+  - sample size planning
+  - accuracy in parameter estimation
+  - power analysis
+  - mediation analysis
+  - reliability
+references:
+  - type: article
+    authors:
+      - family-names: Kelley
+        given-names: Ken
+    title: "Methods for the behavioral, educational, and social sciences: An R package"
+    journal: "Behavior Research Methods"
+    year: 2007
+    volume: 39
+    issue: 4
+    start: 979
+    end: 984
+    doi: 10.3758/BF03192993
+  - type: article
+    authors:
+      - family-names: Kelley
+        given-names: Ken
+    title: "Confidence intervals for standardized effect sizes: Theory, application, and implementation"
+    journal: "Journal of Statistical Software"
+    year: 2007
+    volume: 20
+    issue: 8
+    start: 1
+    end: 24
+    doi: 10.18637/jss.v020.i08
